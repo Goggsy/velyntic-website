@@ -1,0 +1,5 @@
+# Redirect www to apex (configure your DNS to point both)
+https://www.velyntic.com/* https://velyntic.com/:splat 301
+
+# Catch-all SPA fallback (not needed for static but harmless)
+/* /index.html 200
