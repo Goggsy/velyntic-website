@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Velyntic</title>
+  <meta name="description" content="Velyntic services for UK SMEs: SIGNAL Assessment, AI Consultancy, web builds, brand, and the Evolve Partnership. Transparent pricing, no lock-in.">
+  <link rel="icon" type="image/png" href="assets/velyntic-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75,400;100,700;100,800;100,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .services-full { padding: 80px 0; }
+    .svc-section { padding: 72px 0; border-bottom: 1px solid var(--border-subtle); }
+    .svc-section:last-child { border-bottom: none; }
+    .svc-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start; }
+    .svc-layout.reverse { direction: rtl; }
+    .svc-layout.reverse > * { direction: ltr; }
+    .svc-meta { position: sticky; top: 88px; }
+    .svc-meta .svc-type { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
+    .svc-meta h2 { font-size: clamp(28px, 3vw, 38px); font-weight: 800; font-stretch: expanded; margin-bottom: 20px; }
+    .svc-meta .svc-price-value { font-family: 'Archivo', sans-serif; font-weight: 900; font-stretch: expanded; font-size: 28px; color: var(--white); margin-bottom: 6px; }
+    .svc-meta .svc-price-note { font-size: 13px; color: var(--text-dim); margin-bottom: 28px; }
+    .svc-detail h3 { font-size: 16px; font-weight: 700; font-stretch: expanded; color: var(--amber); margin: 28px 0 12px; }
+    .svc-detail h3:first-child { margin-top: 0; }
+    .svc-detail p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 12px; }
+    .svc-includes { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .include-item { display: flex; gap: 12px; align-items: flex-start; font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .include-item::before { content: ''; display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); flex-shrink: 0; margin-top: 7px; }
+    .svc-cta { margin-top: 32px; }
+    .vat-note { text-align: center; padding: 32px 0; font-size: 13px; color: var(--text-dim); border-top: 1px solid var(--border-subtle); }
+
+    @media (max-width: 768px) {
+      .svc-layout, .svc-layout.reverse { grid-template-columns: 1fr; direction: ltr; gap: 40px; }
+      .svc-meta { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<header id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/velyntic-logo-reversed.png" alt="Velyntic"></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="signal.html">SIGNAL</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in touch</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="nav-drawer" id="navDrawer">
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="signal.html">SIGNAL</a>
+  <a href="contact.html">Get in touch</a>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label">What we do</div>
+      <h1>Services built for <em>where you are right now</em></h1>
+      <p>Every service is designed to meet you at your current stage. Whether you have never thought seriously about AI or you are already using it and want to do more, there is a clear next step for you here.</p>
+    </div>
+  </section>
+
+  <div class="services-full">
+    <div class="container">
+
+      <!-- SIGNAL -->
+      <div class="svc-section" id="signal-assessment">
+        <div class="svc-layout">
+          <div class="svc-meta">
+            <div class="svc-badge">Recommended entry point</div>
+            <div class="svc-type">Assessment</div>
+            <h2>SIGNAL Assessment</h2>
+            <div class="svc-price-value">£2,000</div>
+            <div class="svc-price-note">Fixed fee. No surprises. Delivered in 5 to 7 working days.</div>
+            <a href="signal.html" class="btn btn-amber">Learn more about SIGNAL</a>
+          </div>
+          <div class="svc-detail">
+            <h3>What it is</h3>
+            <p>The SIGNAL Assessment is Velyntic's structured entry point for any business considering AI adoption. It is a focused, methodical review of your operations, your team, and your current technology that produces a clear and honest picture of where you are and where AI can genuinely help.</p>
+            <p>SIGNAL is not a sales process dressed up as a report. You will receive a governed roadmap with real recommendations, real priorities, and real honesty about what is not worth doing right now.</p>
+            <h3>What the assessment covers</h3>
+            <div class="svc-includes">
+              <div class="include-item">A discovery session with your key stakeholders, typically one to two hours</div>
+              <div class="include-item">Operations and workflow mapping across your core business functions</div>
+              <div class="include-item">AI readiness scoring across five dimensions: people, process, data, governance, and technology</div>
+              <div class="include-item">A review of your sector's current AI landscape and what competitors are doing</div>
+              <div class="include-item">Identification of three to five priority use cases with effort and value estimates</div>
+              <div class="include-item">A full SIGNAL Report: your governed adoption roadmap in plain language</div>
+              <div class="include-item">A post-delivery review call to walk through the findings and answer questions</div>
+            </div>
+            <h3>Who it is for</h3>
+            <p>Any UK SME that is thinking seriously about AI but is not sure where to start, what is realistic, or how to do it responsibly. It is also valuable for businesses that have already experimented with AI tools but want a structured view of what to do next.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- STARTER WEB PRESENCE -->
+      <div class="svc-section" id="starter-web">
+        <div class="svc-layout reverse">
+          <div class="svc-meta">
+            <div class="svc-badge">Fast track</div>
+            <div class="svc-type">Web Builds</div>
+            <h2>Starter Web Presence</h2>
+            <div class="svc-price-value">£500 to £1,500</div>
+            <div class="svc-price-note">Fixed-scope build. Delivered in 5 to 10 working days.</div>
+            <a href="contact.html?service=starter-web" class="btn btn-amber svc-cta">Get a quote</a>
+          </div>
+          <div class="svc-detail">
+            <h3>What it is</h3>
+            <p>A clean, professional website for small businesses that need a strong online presence without the cost and complexity of a full web build. Fast to deliver, built to last, and designed to grow with you as your needs evolve.</p>
+            <p>Every site is mobile-first, performance-optimised, and deployed on a fast, secure hosting stack. You own every account and every file from day one.</p>
+            <h3>What is included</h3>
+            <div class="svc-includes">
+              <div class="include-item">Up to five pages, scoped and agreed before build begins</div>
+              <div class="include-item">Mobile-first responsive design built to your brand</div>
+              <div class="include-item">Contact form with email delivery (no third-party CRM required)</div>
+              <div class="include-item">Basic on-page SEO: meta descriptions, structured headings, schema markup</div>
+              <div class="include-item">Google Analytics setup and Search Console submission</div>
+              <div class="include-item">Cloudflare deployment with SSL and CDN included</div>
+              <div class="include-item">30 days post-launch support for fixes and minor content changes</div>
+            </div>
+            <h3>Who it is for</h3>
+            <p>Sole traders, micro-businesses, and small local businesses who currently have no website, an outdated one, or a generic site built on a template platform that does not reflect what they actually do.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI WEB BUILD -->
+      <div class="svc-section" id="ai-web-build">
+        <div class="svc-layout">
+          <div class="svc-meta">
+            <div class="svc-type">Web Builds</div>
+            <h2>AI Web Build</h2>
+            <div class="svc-price-value">£4,500 to £12,000</div>
+            <div class="svc-price-note">Scoped per project. Includes one month post-launch support.</div>
+            <a href="contact.html?service=ai-web-build" class="btn btn-amber svc-cta">Discuss your project</a>
+          </div>
+          <div class="svc-detail">
+            <h3>What it is</h3>
+            <p>A full business website with AI woven throughout, not bolted on afterwards. Intelligent intake and contact forms, automation integrations, AI-assisted content tools, and content management. Built to perform on day one and evolve as your business grows.</p>
+            <p>Every AI Web Build is scoped individually. The range reflects the difference between a focused five-page site with smart automation and a large multi-section build with deep integrations. You will always know the number before work begins.</p>
+            <h3>What is included</h3>
+            <div class="svc-includes">
+              <div class="include-item">Full discovery and scoping session before any build work starts</div>
+              <div class="include-item">Custom design built to your brand identity</div>
+              <div class="include-item">AI-powered contact and intake forms with service-specific logic</div>
+              <div class="include-item">Automation integrations (CRM, email, calendar, or custom workflows)</div>
+              <div class="include-item">Content management system so you can update content without touching code</div>
+              <div class="include-item">Full SEO setup: technical, on-page, and schema</div>
+              <div class="include-item">Analytics, Search Console, and performance baseline</div>
+              <div class="include-item">Cloudflare deployment with SSL, CDN, and security headers</div>
+              <div class="include-item">60 days post-launch support and one round of content revisions</div>
+            </div>
+            <h3>Who it is for</h3>
+            <p>SMEs that want their website to do more than sit there. If you want AI to handle initial lead qualification, route enquiries to the right person, or generate content drafts for your team to review, this is the service for you.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRAND FOUNDATION -->
+      <div class="svc-section" id="brand-foundation">
+        <div class="svc-layout reverse">
+          <div class="svc-meta">
+            <div class="svc-type">Brand</div>
+            <h2>Brand Foundation</h2>
+            <div class="svc-price-value">From £1,500</div>
+            <div class="svc-price-note">Scoped to your requirements. Final scope agreed before work begins.</div>
+            <a href="contact.html?service=brand-foundation" class="btn btn-amber svc-cta">Start a conversation</a>
+          </div>
+          <div class="svc-detail">
+            <h3>What it is</h3>
+            <p>A complete brand identity for businesses that are starting out or that have outgrown a logo made years ago under different circumstances. Brand Foundation covers everything you need to show up consistently and credibly before a customer ever speaks to you.</p>
+            <p>The output is a brand bible: a document that codifies your visual and verbal identity so that every touchpoint, from your website to your invoice, looks and sounds like you.</p>
+            <h3>What is included</h3>
+            <div class="svc-includes">
+              <div class="include-item">Brand discovery session to understand your positioning, audience, and values</div>
+              <div class="include-item">Logo design with primary, reversed, and monochrome variants</div>
+              <div class="include-item">Full colour palette with accessibility-checked contrast ratios</div>
+              <div class="include-item">Typography system with heading and body typeface pairing</div>
+              <div class="include-item">Tone of voice guide with before-and-after examples</div>
+              <div class="include-item">Brand bible document (PDF) covering all guidelines</div>
+              <div class="include-item">Full file pack in all formats: SVG, PNG, PDF, and web-ready assets</div>
+            </div>
+            <h3>Who it is for</h3>
+            <p>New businesses that want to start with a professional identity, and established businesses whose brand no longer reflects what they have become.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI CONSULTANCY -->
+      <div class="svc-section" id="ai-consultancy">
+        <div class="svc-layout">
+          <div class="svc-meta">
+            <div class="svc-type">Consultancy</div>
+            <h2>AI Consultancy</h2>
+            <div class="svc-price-value">£850 to £1,250 <span style="font-weight:400;font-size:18px">/day</span></div>
+            <div class="svc-price-note">Day rate. Minimum one day. Project scoping available on request.</div>
+            <a href="contact.html?service=ai-consultancy" class="btn btn-amber svc-cta">Discuss your needs</a>
+          </div>
+          <div class="svc-detail">
+            <h3>What it is</h3>
+            <p>Strategic and operational AI guidance delivered by someone who has spent fifteen years making things work in high-stakes, resource-constrained environments. Not theory. Not slide decks. Practical, accountable advice that translates into real change in your business.</p>
+            <p>Day rate work can be structured as a single focused session, a series of workshops, or an ongoing advisory arrangement. The rate reflects the seniority and experience brought to each engagement.</p>
+            <h3>What consultancy typically covers</h3>
+            <div class="svc-includes">
+              <div class="include-item">Strategic AI planning: where to focus, what to avoid, how to sequence adoption</div>
+              <div class="include-item">Tool selection and evaluation: which AI products are right for your specific context</div>
+              <div class="include-item">Process automation design: mapping workflows and identifying automation opportunities</div>
+              <div class="include-item">Prompt engineering and AI workflow setup for your team's day-to-day use</div>
+              <div class="include-item">Governance framework design: human oversight, ethical guard-rails, data handling policies</div>
+              <div class="include-item">Team training sessions: practical, hands-on, not death by PowerPoint</div>
+              <div class="include-item">Documentation so the knowledge stays in your business after the engagement ends</div>
+            </div>
+            <h3>Who it is for</h3>
+            <p>SMEs that have a specific challenge or opportunity and want senior, experienced input. Also suited to businesses that have a capable team but want an independent perspective on their AI direction.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVOLVE PARTNERSHIP -->
+      <div class="svc-section" id="evolve-partnership">
+        <div class="svc-layout reverse">
+          <div class="svc-meta">
+            <div class="svc-type">Retained</div>
+            <h2>Evolve Partnership</h2>
+            <div class="svc-price-value">From £750 <span style="font-weight:400;font-size:18px">/month</span></div>
+            <div class="svc-price-note">Rolling monthly retainer. No minimum term. Cancel any time.</div>
+            <a href="contact.html?service=evolve-partnership" class="btn btn-amber svc-cta">Talk about a retainer</a>
+          </div>
+          <div class="svc-detail">
+            <h3>What it is</h3>
+            <p>The Evolve Partnership is the retained relationship that sits at the end of ADDEE, and feeds back into the beginning. Once your AI adoption is underway, the Evolve Partnership keeps it moving in the right direction as your business grows and the AI landscape continues to shift.</p>
+            <p>It is also Velyntic's commercial model for long-term clients. We are not interested in a transaction. We are interested in becoming a lasting part of how your business operates and improves over time.</p>
+            <h3>What is included each month</h3>
+            <div class="svc-includes">
+              <div class="include-item">Monthly performance review: what is working, what is not, and what to do about it</div>
+              <div class="include-item">AI system optimisation and prompt refinement as tools and models evolve</div>
+              <div class="include-item">New use case identification as your business grows or your needs change</div>
+              <div class="include-item">Quarterly SIGNAL review: a lighter version of the original assessment to reset priorities</div>
+              <div class="include-item">Priority support: your queries go to the front of the queue</div>
+              <div class="include-item">Ongoing team training as new tools and workflows are introduced</div>
+              <div class="include-item">Website and automation maintenance for Velyntic-built systems</div>
+            </div>
+            <h3>Who it is for</h3>
+            <p>Businesses that have completed a SIGNAL Assessment or an initial delivery phase and want to keep the momentum going with a trusted partner who already knows their context. The retainer replaces the need to brief a new consultant every time something changes.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="vat-note">All prices shown are exclusive of VAT. Fixed-fee services are fully scoped and agreed in writing before any work begins. No surprises.</p>
+  </div>
+
+  <!-- SIGNAL CTA -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="signal-box">
+        <div class="section-label">Not sure which service is right for you?</div>
+        <h2 class="section-title">Start with SIGNAL and we will work it out together.</h2>
+        <p class="section-body" style="margin-bottom:36px;">The SIGNAL Assessment gives us a clear picture of where you are and what would genuinely help. Most clients who come in unsure leave with a sequenced plan that makes the next step obvious.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="signal.html" class="btn btn-amber">Find out about SIGNAL</a>
+          <a href="contact.html" class="btn btn-outline">Just want to talk? Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="index.html" class="footer-logo"><img src="assets/velyntic-logo-reversed.png" alt="Velyntic"></a>
+    <ul class="footer-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="signal.html">SIGNAL</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Velyntic. People-first AI adoption for UK SMEs.</p>
+  </div>
+  <div class="footer-credit">
+    <div class="footer-credit-inner">
+      Designed &amp; built by
+      <img src="assets/velyntic-mark-reversed.png" alt="Velyntic mark">
+      <strong>VELYNTIC</strong>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
