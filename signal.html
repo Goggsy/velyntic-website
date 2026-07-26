@@ -73,17 +73,11 @@
     .sig-opt { text-align: left; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text-primary); background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.09); border-radius: 9px; padding: 13px 15px; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
     .sig-opt:hover { border-color: var(--amber); background: rgba(245,158,11,0.06); }
     .sig-flabel { font-size: 12px; color: var(--text-muted); display: block; margin-top: 16px; }
-    .sig-flabel-row { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; }
-    .sig-flabel-row .sig-flabel-txt { font-size: 12px; color: var(--text-muted); }
-    .sig-team-badge { font-family: 'Archivo', sans-serif; font-weight: 800; font-stretch: expanded; font-size: 18px; color: var(--navy); background: var(--amber); border-radius: 6px; padding: 4px 14px; min-width: 44px; text-align: center; line-height: 1.4; }
     .sig-field { display: block; width: 100%; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text-primary); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 9px; padding: 12px 14px; margin-top: 6px; -webkit-appearance: none; appearance: none; }
     .sig-field:focus { outline: none; border-color: var(--amber); }
     select.sig-field { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235A6A82' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
     select.sig-field option { background: #111f38; color: var(--text-primary); }
-    .sig-slider { width: 100%; margin-top: 16px; -webkit-appearance: none; appearance: none; height: 8px; border-radius: 5px; background: rgba(255,255,255,0.09); outline: none; cursor: pointer; }
-    .sig-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 24px; height: 24px; border-radius: 50%; background: var(--amber); border: 3px solid var(--navy); box-shadow: 0 0 0 2px var(--amber), 0 2px 8px rgba(0,0,0,0.45); cursor: pointer; }
-    .sig-slider::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: var(--amber); border: 3px solid var(--navy); box-shadow: 0 0 0 2px var(--amber), 0 2px 8px rgba(0,0,0,0.45); cursor: pointer; }
-    .sig-slider::-moz-range-track { height: 8px; border-radius: 5px; background: rgba(255,255,255,0.09); }
+    .sig-slider { width: 100%; margin-top: 10px; accent-color: var(--amber); }
     .sig-gauge { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border-subtle); }
     .sig-grow { display: flex; justify-content: space-between; align-items: baseline; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
     .sig-num { font-family: 'Archivo', sans-serif; font-stretch: expanded; font-weight: 800; font-size: 24px; color: var(--amber); }
@@ -219,7 +213,7 @@
               <option value="hospitality">Hospitality and catering</option>
               <option value="other">Something else</option>
             </select>
-            <label class="sig-flabel-row"><span class="sig-flabel-txt">How many people work there?</span><span class="sig-team-badge" id="sig-team-lab">10</span></label>
+            <label class="sig-flabel">How many people work there? (<span id="sig-team-lab">10</span>)</label>
             <input type="range" min="1" max="100" value="10" class="sig-slider" id="sig-team">
             <div style="margin-top:20px;"><button class="btn btn-amber" id="sig-go">See my result</button></div>
           </div>

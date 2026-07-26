@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Design Intake | Velyntic</title>
+  <meta name="description" content="Tell us everything we need to build your website — Starter Web Presence or AI Web Build — in one sitting.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="assets/velyntic-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75,400;100,700;100,800;100,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/velyntic-logo-lockup.png" alt="Velyntic"></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="signal.html">SIGNAL</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in touch</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="nav-drawer" id="navDrawer">
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="signal.html">SIGNAL</a>
+  <a href="contact.html">Get in touch</a>
+</nav>
+
+<main>
+  <section class="intake-hero">
+    <div class="container">
+      <div class="section-label">Web Design · Client intake</div>
+      <h1 style="font-size:clamp(32px,4.5vw,52px);max-width:760px;margin-bottom:16px;">Everything we need to build your site, in one sitting.</h1>
+      <p style="font-size:17px;color:var(--text-muted);max-width:620px;line-height:1.8;">This form replaces the back-and-forth. Tell us who you are, what the site needs to do, and what you already have &mdash; the more complete this is, the fewer questions we need to come back with. Takes most people 15&ndash;20 minutes.</p>
+      <div class="intake-progress" aria-hidden="true">
+        <span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="intake-wrap">
+    <div class="intake-card">
+      <form action="https://usebasin.com/f/eb49aa8947b6" method="POST" enctype="multipart/form-data" id="webForm">
+        <input type="text" name="_honeypot" class="basin-hp" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="form_name" value="Web Design Intake">
+
+        <!-- SECTION 0: TIER -->
+        <div class="intake-section">
+          <div class="intake-section-num">Section 1 of 6</div>
+          <h3>Which service is this for?</h3>
+          <p class="intake-section-desc">This decides which questions we ask next, so the rest of the form only shows what's relevant to you.</p>
+          <div class="tier-select">
+            <div class="tier-option">
+              <input type="radio" id="tier-starter" name="service_tier" value="Starter Web Presence" required>
+              <label for="tier-starter">
+                <span class="tier-name">Starter Web Presence</span>
+                <span class="tier-price">£500&ndash;£1,500</span>
+                <span class="tier-desc">Up to 5 pages, mobile-first, contact form, basic SEO. Fast turnaround.</span>
+              </label>
+            </div>
+            <div class="tier-option">
+              <input type="radio" id="tier-ai" name="service_tier" value="AI Web Build" required>
+              <label for="tier-ai">
+                <span class="tier-name">AI Web Build</span>
+                <span class="tier-price">£4,500&ndash;£12,000</span>
+                <span class="tier-desc">Full custom build with AI-powered intake, automations and CMS.</span>
+              </label>
+            </div>
+            <div class="tier-option">
+              <input type="radio" id="tier-unsure" name="service_tier" value="Not sure yet" required>
+              <label for="tier-unsure">
+                <span class="tier-name">Not sure yet</span>
+                <span class="tier-price">&nbsp;</span>
+                <span class="tier-desc">Fill in the rest and we'll recommend the right tier for you.</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 1: BUSINESS -->
+        <div class="intake-section">
+          <div class="intake-section-num">Section 2 of 6</div>
+          <h3>Your business</h3>
+          <p class="intake-section-desc">The basics — who you are and how we reach you.</p>
+          <div class="form-stack">
+            <div class="form-row">
+              <div class="field">
+                <label for="biz-name">Business name <span style="color:var(--amber)">*</span></label>
+                <input type="text" id="biz-name" name="business_name" required>
+              </div>
+              <div class="field">
+                <label for="industry">Industry / sector <span style="color:var(--amber)">*</span></label>
+                <input type="text" id="industry" name="industry" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="contact-name">Your name <span style="color:var(--amber)">*</span></label>
+                <input type="text" id="contact-name" name="contact_name" required>
+              </div>
+              <div class="field">
+                <label for="contact-email">Email address <span style="color:var(--amber)">*</span></label>
+                <input type="email" id="contact-email" name="contact_email" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="contact-phone">Phone / WhatsApp number</label>
+                <input type="tel" id="contact-phone" name="contact_phone">
+              </div>
+              <div class="field">
+                <label for="domain-status">Domain &amp; hosting status</label>
+                <select id="domain-status" name="domain_hosting_status">
+                  <option value="" disabled selected>Select one</option>
+                  <option>I own a domain and it's ready to point at a new site</option>
+                  <option>I own a domain but need help pointing it</option>
+                  <option>I need to buy a domain</option>
+                  <option>Not sure</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="existing-site">Do you have an existing website? If so, what's the URL and what's wrong with it?</label>
+              <textarea id="existing-site" name="existing_site_notes" placeholder="e.g. www.example.co.uk — it's outdated, not mobile-friendly, and doesn't reflect what we actually do now"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: GOALS -->
+        <div class="intake-section">
+          <div class="intake-section-num">Section 3 of 6</div>
+          <h3>Goals &amp; structure</h3>
+          <p class="intake-section-desc">What the site needs to achieve, and the shape it should take.</p>
+          <div class="form-stack">
+            <div class="field">
+              <label>Main goal of the site (tick all that apply) <span style="color:var(--amber)">*</span></label>
+              <div class="check-grid">
+                <label class="check-item"><input type="checkbox" name="goals[]" value="Generate enquiries"> Generate enquiries/leads</label>
+                <label class="check-item"><input type="checkbox" name="goals[]" value="Sell products online"> Sell products online</label>
+                <label class="check-item"><input type="checkbox" name="goals[]" value="Showcase work/portfolio"> Showcase work / portfolio</label>
+                <label class="check-item"><input type="checkbox" name="goals[]" value="Provide information"> Provide information / credibility</label>
+                <label class="check-item"><input type="checkbox" name="goals[]" value="Bookings/appointments"> Take bookings / appointments</label>
+                <label class="check-item"><input type="checkbox" name="goals[]" value="Other"> Other (tell us below)</label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="primary-cta">What's the one action you most want a visitor to take?</label>
+              <input type="text" id="primary-cta" name="primary_cta" placeholder="e.g. Message us on WhatsApp / Call now / Request a quote">
+            </div>
+            <div class="field">
+              <label>Which pages do you need? (tick all that apply) <span style="color:var(--amber)">*</span></label>
+              <div class="check-grid">
+                <label class="check-item"><input type="checkbox" name="pages[]" value="Home"> Home</label>
+                <label class="check-item"><input type="checkbox" name="pages[]" value="About"> About</label>
+                <label class="check-item"><input type="checkbox" name="pages[]" value="Services"> Services</label>
+                <label class="check-item"><input type="checkbox" name="pages[]" value="Gallery/Portfolio"> Gallery / Portfolio</label>
+                <label class="check-item"><input type="checkbox" name="pages[]" value="Contact"> Contact</label>
+                <label class="check-item"><input type="checkbox" name="pages[]" value="Blog"> Blog / News</label>
+                <label class="check-item"><input type="checkbox" name="pages[]" value="Shop"> Shop / Ecommerce</label>
+                <label class="check-item"><input type="checkbox" name="pages[]" value="FAQ"> FAQ</label>
+                <label class="check-item"><input type="checkbox" name="pages[]" value="Team"> Team / Meet the team</label>
+                <label class="check-item"><input type="checkbox" name="pages[]" value="Other"> Other (tell us below)</label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="must-have">Anything else that's a must-have, versus nice-to-have?</label>
+              <textarea id="must-have" name="must_have_vs_nice_to_have"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: CONTENT & ASSETS -->
+        <div class="intake-section">
+          <div class="intake-section-num">Section 4 of 6</div>
+          <h3>Content &amp; assets</h3>
+          <p class="intake-section-desc">What you already have ready to go, so we know what we're building from versus creating from scratch.</p>
+          <div class="form-stack">
+            <div class="field">
+              <label for="has-copy">Do you already have written copy/text for the site, or do you need us to write it?</label>
+              <select id="has-copy" name="copy_status">
+                <option value="" disabled selected>Select one</option>
+                <option>I have all the copy written</option>
+                <option>I have some, need help with the rest</option>
+                <option>I need it written from scratch</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="has-brand">Do you already have a logo and brand identity (colours, fonts) to build the site around?</label>
+              <select id="has-brand" name="brand_status">
+                <option value="" disabled selected>Select one</option>
+                <option>Yes, full brand pack ready to hand over</option>
+                <option>Yes, just a logo, nothing else formal</option>
+                <option>No, nothing yet</option>
+              </select>
+              <div class="intake-cross-sell">No brand yet? Our <a href="brand-foundation-intake.html">Brand Foundation</a> service builds the logo, colours and tone of voice this site will be built on — worth doing first if you're starting from nothing.</div>
+            </div>
+            <div class="field">
+              <label for="has-photos">Do you have your own photography, or will you need stock/AI-generated imagery?</label>
+              <textarea id="has-photos" name="photography_status" placeholder="e.g. I have about 20 job photos on my phone / I have none, will need help sourcing images"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: DESIGN PREFERENCES -->
+        <div class="intake-section">
+          <div class="intake-section-num">Section 5 of 6</div>
+          <h3>Design preferences</h3>
+          <p class="intake-section-desc">Nothing here is final &mdash; it steers our first design direction.</p>
+          <div class="form-stack">
+            <div class="field">
+              <label for="reference-sites">2&ndash;4 websites you like the look of (any industry), and what you like about each</label>
+              <textarea id="reference-sites" name="reference_sites"></textarea>
+            </div>
+            <div class="field">
+              <label>Which tones fit the site? (tick all that apply)</label>
+              <div class="check-grid">
+                <label class="check-item"><input type="checkbox" name="tone[]" value="Professional"> Professional</label>
+                <label class="check-item"><input type="checkbox" name="tone[]" value="Friendly"> Friendly</label>
+                <label class="check-item"><input type="checkbox" name="tone[]" value="Bold"> Bold</label>
+                <label class="check-item"><input type="checkbox" name="tone[]" value="Traditional"> Traditional</label>
+                <label class="check-item"><input type="checkbox" name="tone[]" value="Premium"> Premium</label>
+                <label class="check-item"><input type="checkbox" name="tone[]" value="Down-to-earth"> Down-to-earth</label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="dont-want">Anything you specifically don't want (colours, styles, layouts, competitor look-alikes)?</label>
+              <textarea id="dont-want" name="design_dislikes"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONDITIONAL: AI WEB BUILD ONLY -->
+        <div class="intake-section intake-conditional" id="aiSection">
+          <div class="intake-section-num">AI Web Build &mdash; additional questions</div>
+          <h3>AI &amp; automation</h3>
+          <p class="intake-section-desc">Only relevant to the AI Web Build tier &mdash; skip if you're not sure yet and we'll confirm together.</p>
+          <div class="form-stack">
+            <div class="field">
+              <label for="ai-intake">Do you want an AI-powered contact/intake form that pre-qualifies or routes enquiries?</label>
+              <select id="ai-intake" name="wants_ai_intake_form">
+                <option value="" disabled selected>Select one</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Not sure, advise me</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Automation integrations you'd want (tick all that apply)</label>
+              <div class="check-grid">
+                <label class="check-item"><input type="checkbox" name="automations[]" value="CRM"> CRM</label>
+                <label class="check-item"><input type="checkbox" name="automations[]" value="Email marketing"> Email marketing</label>
+                <label class="check-item"><input type="checkbox" name="automations[]" value="Calendar/booking"> Calendar / booking</label>
+                <label class="check-item"><input type="checkbox" name="automations[]" value="Custom workflow"> Custom workflow (describe below)</label>
+                <label class="check-item"><input type="checkbox" name="automations[]" value="None"> None needed</label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="cms-wanted">Do you want a content management system so you can update the site yourself, without needing to contact us?</label>
+              <select id="cms-wanted" name="wants_cms">
+                <option value="" disabled selected>Select one</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Not sure, advise me</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="ai-specifics">Any specific AI features already in mind?</label>
+              <textarea id="ai-specifics" name="ai_feature_notes" placeholder="e.g. auto-reply to enquiries, content drafting tools, chat widget"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: PRACTICAL -->
+        <div class="intake-section">
+          <div class="intake-section-num">Section 6 of 6</div>
+          <h3>Practical</h3>
+          <div class="form-stack">
+            <div class="form-row">
+              <div class="field">
+                <label for="timeline">Deadline or target launch date</label>
+                <input type="text" id="timeline" name="timeline" placeholder="e.g. No fixed date / Need live in 6 weeks">
+              </div>
+              <div class="field">
+                <label for="support-needed">Do you want ongoing support/maintenance after launch?</label>
+                <select id="support-needed" name="ongoing_support_needed">
+                  <option value="" disabled selected>Select one</option>
+                  <option>Yes, tell me more about a retainer</option>
+                  <option>Not right now</option>
+                  <option>Not sure</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="anything-else">Anything else we should know before we start?</label>
+              <textarea id="anything-else" name="anything_else"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="intake-submit-row">
+          <button type="submit" class="form-submit">Submit my Web Design brief</button>
+          <p class="form-note">Sent straight to Velyntic. We'll confirm receipt within one working day and won't need to chase you for anything covered above.</p>
+        </div>
+      </form>
+    </div>
+    <div class="intake-back"><a href="services.html">&larr; Back to Services</a></div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="index.html" class="footer-logo"><img src="assets/velyntic-logo-lockup.png" alt="Velyntic"></a>
+    <ul class="footer-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="signal.html">SIGNAL</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Velyntic. People-first AI adoption for SMEs.</p>
+  </div>
+  <div class="footer-credit">
+    <div class="footer-credit-inner">
+      Designed &amp; built by
+      <img src="assets/velyntic-mark.png" alt="Velyntic mark">
+      <strong>VELYNTIC</strong>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  const aiSection = document.getElementById('aiSection');
+  const tierRadios = document.querySelectorAll('input[name="service_tier"]');
+  function updateAiSection() {
+    const checked = document.querySelector('input[name="service_tier"]:checked');
+    if (checked && checked.value === 'AI Web Build') {
+      aiSection.classList.add('show');
+    } else {
+      aiSection.classList.remove('show');
+    }
+  }
+  tierRadios.forEach(r => r.addEventListener('change', updateAiSection));
+  updateAiSection();
+</script>
+</body>
+</html>
