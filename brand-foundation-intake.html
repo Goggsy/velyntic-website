@@ -41,291 +41,404 @@
   <section class="intake-hero">
     <div class="container">
       <div class="section-label">Brand Foundation · Client intake</div>
-      <h1 style="font-size:clamp(32px,4.5vw,52px);max-width:760px;margin-bottom:16px;">Everything we need to build your brand, in one sitting.</h1>
-      <p style="font-size:17px;color:var(--text-muted);max-width:620px;line-height:1.8;">This form replaces the back-and-forth. The more detail you give us here, the fewer questions we need to come back with — and the faster your Brand Foundation Pack lands. It takes most people 15&ndash;25 minutes. There's no login and nothing is saved until you submit, so it's worth doing in one go.</p>
-      <div class="intake-progress" aria-hidden="true">
-        <span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span>
-      </div>
+      <h1 style="font-size:clamp(32px,4.5vw,52px);max-width:760px;margin-bottom:16px;">Everything we need to build your brand, one question at a time.</h1>
+      <p style="font-size:17px;color:var(--text-muted);max-width:620px;line-height:1.8;">No login, nothing saved until you submit. Most people finish in 15&ndash;20 minutes. Tap an answer where you can, type where you can't &mdash; either way, the more complete this is, the fewer questions we need to come back with.</p>
     </div>
   </section>
 
   <div class="intake-wrap">
-    <div class="intake-card">
-      <form action="https://usebasin.com/f/e944697d2caf" method="POST" enctype="multipart/form-data">
+    <div class="wiz-panel">
+      <div class="wiz-head">
+        <span><span class="pulse"></span> Brand Foundation intake</span>
+        <span class="wiz-count">Question 1 of 28</span>
+      </div>
+      <div class="wiz-track"><div class="wiz-fill"></div></div>
+
+      <form action="https://usebasin.com/f/e944697d2caf" method="POST" enctype="multipart/form-data" id="brandForm">
         <input type="text" name="_honeypot" class="basin-hp" tabindex="-1" autocomplete="off">
         <input type="hidden" name="form_name" value="Brand Foundation Intake">
 
-        <!-- SECTION 1 -->
-        <div class="intake-section">
-          <div class="intake-section-num">Section 1 of 6</div>
-          <h3>Your business</h3>
-          <p class="intake-section-desc">The basics — who you are, how we reach you, and what's already out there.</p>
-          <div class="form-stack">
-            <div class="form-row">
-              <div class="field">
-                <label for="biz-name">Business name <span style="color:var(--amber)">*</span></label>
-                <input type="text" id="biz-name" name="business_name" required placeholder="e.g. Coates Construction">
-              </div>
-              <div class="field">
-                <label for="trading-name">Trading name (if different)</label>
-                <input type="text" id="trading-name" name="trading_name" placeholder="Leave blank if same">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="structure">Trading structure <span style="color:var(--amber)">*</span></label>
-                <select id="structure" name="trading_structure" required>
-                  <option value="" disabled selected>Select one</option>
-                  <option>Sole trader</option>
-                  <option>Partnership</option>
-                  <option>Limited company</option>
-                  <option>Not yet registered / pre-trading</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="established">Year established (or "new business")</label>
-                <input type="text" id="established" name="year_established" placeholder="e.g. 2001, or New business">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="industry">Industry / sector <span style="color:var(--amber)">*</span></label>
-                <input type="text" id="industry" name="industry" required placeholder="e.g. General building & construction">
-              </div>
-              <div class="field">
-                <label for="team-size">Team size</label>
-                <input type="text" id="team-size" name="team_size" placeholder="e.g. Just me, or 3 including subcontractors">
-              </div>
+        <!-- 1: business name / trading name -->
+        <div class="wiz-step wiz-active">
+          <div class="wiz-eyebrow">Your business</div>
+          <p class="wiz-question">What's your business called?</p>
+          <div class="wiz-field-pair">
+            <div class="field">
+              <label for="biz-name">Business name</label>
+              <input type="text" id="biz-name" name="business_name" data-required="true" required placeholder="e.g. Coates Construction">
             </div>
             <div class="field">
-              <label for="team-names">Names of key people we should know (optional, but helps with tone)</label>
+              <label for="trading-name">Trading name (if different)</label>
+              <input type="text" id="trading-name" name="trading_name" placeholder="Leave blank if same">
+            </div>
+          </div>
+          <p class="wiz-warn">Please add your business name before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn hidden-vis">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 2: trading structure -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Your business</div>
+          <p class="wiz-question">What's your trading structure?</p>
+          <input type="hidden" name="trading_structure" data-required="true" required>
+          <div class="wiz-opts">
+            <button type="button" class="wiz-opt" data-target="trading_structure" data-value="Sole trader">Sole trader<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="trading_structure" data-value="Partnership">Partnership<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="trading_structure" data-value="Limited company">Limited company<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="trading_structure" data-value="Not yet registered / pre-trading">Not yet registered / pre-trading<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="trading_structure" data-value="Other">Other<span class="chev">›</span></button>
+          </div>
+          <p class="wiz-warn">Please choose one before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button></div>
+        </div>
+
+        <!-- 3: industry / established -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Your business</div>
+          <p class="wiz-question">What industry are you in, and how long established?</p>
+          <div class="wiz-field-pair">
+            <div class="field">
+              <label for="industry">Industry / sector</label>
+              <input type="text" id="industry" name="industry" data-required="true" required placeholder="e.g. General building & construction">
+            </div>
+            <div class="field">
+              <label for="established">Year established</label>
+              <input type="text" id="established" name="year_established" placeholder="e.g. 2001, or New business">
+            </div>
+          </div>
+          <p class="wiz-warn">Please tell us your industry before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 4: team size / names -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Your business <span class="wiz-optional-tag">optional</span></div>
+          <p class="wiz-question">Who's on the team?</p>
+          <p class="wiz-desc">Names help us get the tone right — skip if it's just you for now.</p>
+          <div class="wiz-field-pair">
+            <div class="field">
+              <label for="team-size">Team size</label>
+              <input type="text" id="team-size" name="team_size" placeholder="e.g. Just me, or 3 including subcontractors">
+            </div>
+            <div class="field">
+              <label for="team-names">Key names</label>
               <input type="text" id="team-names" name="team_names" placeholder="e.g. Neil (owner), Mick, Max">
             </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="contact-name">Your name <span style="color:var(--amber)">*</span></label>
-                <input type="text" id="contact-name" name="contact_name" required>
-              </div>
-              <div class="field">
-                <label for="contact-email">Email address <span style="color:var(--amber)">*</span></label>
-                <input type="email" id="contact-email" name="contact_email" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="contact-phone">Phone number</label>
-                <input type="tel" id="contact-phone" name="contact_phone">
-              </div>
-              <div class="field">
-                <label for="best-contact">Best way to reach you <span style="color:var(--amber)">*</span></label>
-                <select id="best-contact" name="best_contact_method" required>
-                  <option value="" disabled selected>Select one</option>
-                  <option>Email</option>
-                  <option>Phone call</option>
-                  <option>WhatsApp</option>
-                  <option>Text message</option>
-                </select>
-              </div>
-            </div>
-            <div class="field">
-              <label for="public-contact">Which contact details are OK to print publicly (business cards, website, van signage etc.), and which should stay private (e.g. only used behind a contact form)?</label>
-              <textarea id="public-contact" name="public_vs_private_contact" placeholder="e.g. Phone number and WhatsApp are fine everywhere. My personal email should never be shown publicly — keep it behind the website contact form only."></textarea>
-            </div>
-            <div class="field">
-              <label for="domain">Do you already own a domain name, or a preferred one in mind?</label>
-              <input type="text" id="domain" name="domain_status" placeholder="e.g. Own coates-construction.co.uk / Still need to buy one / Not sure">
-            </div>
-            <div class="field">
-              <label for="existing-brand">Do you currently have a logo or brand identity?</label>
-              <select id="existing-brand" name="existing_brand_status">
-                <option value="" disabled selected>Select one</option>
-                <option>No, starting from nothing</option>
-                <option>Yes, but I want a completely new one</option>
-                <option>Yes, and I want it refreshed/modernised, not replaced</option>
-              </select>
-            </div>
           </div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
         </div>
 
-        <!-- SECTION 2 -->
-        <div class="intake-section">
-          <div class="intake-section-num">Section 2 of 6</div>
-          <h3>What you do</h3>
-          <p class="intake-section-desc">In your own words — this is what gives your brand something real to say.</p>
-          <div class="form-stack">
+        <!-- 5: contact name / email -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Getting in touch</div>
+          <p class="wiz-question">Who should we contact, and where?</p>
+          <div class="wiz-field-pair">
             <div class="field">
-              <label for="what-you-do">Describe what your business does, in your own words <span style="color:var(--amber)">*</span></label>
-              <textarea id="what-you-do" name="what_you_do" required style="min-height:130px;" placeholder="Don't worry about sounding polished — tell us like you'd tell a mate. We'll shape the language later."></textarea>
+              <label for="contact-name">Your name</label>
+              <input type="text" id="contact-name" name="contact_name" data-required="true" required>
             </div>
             <div class="field">
-              <label for="full-services">Full list of services/products you offer <span style="color:var(--amber)">*</span></label>
-              <textarea id="full-services" name="full_services_list" required placeholder="Be as specific and complete as you can — this avoids us guessing or missing something out."></textarea>
-            </div>
-            <div class="field">
-              <label for="differentiator">What makes you different from competitors? <span style="color:var(--amber)">*</span></label>
-              <textarea id="differentiator" name="differentiator" required placeholder="e.g. We manage the whole job from planning to completion, not just one trade."></textarea>
-            </div>
-            <div class="field">
-              <label for="competitors">2&ndash;4 competitors or similar businesses (name + what you think of them)</label>
-              <textarea id="competitors" name="competitors"></textarea>
-            </div>
-            <div class="field">
-              <label for="brand-crush">2&ndash;4 brands you love the look of (any industry) &mdash; and what specifically you like about each</label>
-              <textarea id="brand-crush" name="brand_crush" placeholder="e.g. Really like how [brand] uses bold colour and simple type. Not keen on anything too corporate."></textarea>
+              <label for="contact-email">Email address</label>
+              <input type="email" id="contact-email" name="contact_email" data-required="true" required>
             </div>
           </div>
+          <p class="wiz-warn">Please add your name and email before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
         </div>
 
-        <!-- SECTION 3 -->
-        <div class="intake-section">
-          <div class="intake-section-num">Section 3 of 6</div>
-          <h3>Audience &amp; positioning</h3>
-          <p class="intake-section-desc">Who this brand needs to convince, and what you want them to walk away thinking.</p>
-          <div class="form-stack">
+        <!-- 6: phone + best contact method -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Getting in touch</div>
+          <p class="wiz-question">What's the best way to reach you?</p>
+          <div class="field">
+            <label for="contact-phone">Phone number <span class="wiz-optional-tag">optional</span></label>
+            <input type="tel" id="contact-phone" name="contact_phone">
+          </div>
+          <input type="hidden" name="best_contact_method" data-required="true" required>
+          <div class="wiz-opts">
+            <button type="button" class="wiz-opt" data-target="best_contact_method" data-value="Email">Email<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="best_contact_method" data-value="Phone call">Phone call<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="best_contact_method" data-value="WhatsApp">WhatsApp<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="best_contact_method" data-value="Text message">Text message<span class="chev">›</span></button>
+          </div>
+          <p class="wiz-warn">Please choose one before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button></div>
+        </div>
+
+        <!-- 7: public vs private contact -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Getting in touch <span class="wiz-optional-tag">optional but useful</span></div>
+          <p class="wiz-question">Which contact details are OK to print publicly, and which should stay private?</p>
+          <p class="wiz-desc">Think business cards, van signage, the website. Some clients want their personal email kept off the public site and only used behind a contact form.</p>
+          <div class="field">
+            <textarea name="public_vs_private_contact" placeholder="e.g. Phone and WhatsApp are fine everywhere. My personal email should never be shown publicly — keep it behind the website contact form only."></textarea>
+          </div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 8: domain -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Getting in touch</div>
+          <p class="wiz-question">Do you already have a domain name?</p>
+          <input type="hidden" name="domain_status" data-required="true" required>
+          <div class="wiz-opts">
+            <button type="button" class="wiz-opt" data-target="domain_status" data-value="Own a domain" data-autonext="false">Yes, I own one<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="domain_status" data-value="Need to buy a domain">No, I need to buy one<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="domain_status" data-value="Not sure">Not sure<span class="chev">›</span></button>
+          </div>
+          <div class="field" style="margin-top:16px;">
+            <label for="domain-name">Domain name, if known <span class="wiz-optional-tag">optional</span></label>
+            <input type="text" id="domain-name" name="domain_name" placeholder="e.g. coates-construction.co.uk">
+          </div>
+          <p class="wiz-warn">Please choose one before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 9: existing brand -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Getting in touch</div>
+          <p class="wiz-question">Do you currently have a logo or brand identity?</p>
+          <input type="hidden" name="existing_brand_status" data-required="true" required>
+          <div class="wiz-opts">
+            <button type="button" class="wiz-opt" data-target="existing_brand_status" data-value="No, starting from nothing">No, starting from nothing<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="existing_brand_status" data-value="Yes, but I want a completely new one">Yes, but I want a completely new one<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="existing_brand_status" data-value="Yes, and I want it refreshed, not replaced">Yes, and I want it refreshed, not replaced<span class="chev">›</span></button>
+          </div>
+          <p class="wiz-warn">Please choose one before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button></div>
+        </div>
+
+        <!-- 10: what you do -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">What you do</div>
+          <p class="wiz-question">Describe what your business does, in your own words.</p>
+          <p class="wiz-desc">Don't worry about sounding polished — tell us like you'd tell a mate. We'll shape the language later.</p>
+          <div class="field"><textarea name="what_you_do" data-required="true" required style="min-height:130px;"></textarea></div>
+          <p class="wiz-warn">Please tell us a little about what you do before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 11: full services -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">What you do</div>
+          <p class="wiz-question">What's the full list of services or products you offer?</p>
+          <p class="wiz-desc">Be as specific and complete as you can — this avoids us guessing or missing something out.</p>
+          <div class="field"><textarea name="full_services_list" data-required="true" required></textarea></div>
+          <p class="wiz-warn">Please list your services before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 12: differentiator -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">What you do</div>
+          <p class="wiz-question">What makes you different from competitors?</p>
+          <div class="field"><textarea name="differentiator" data-required="true" required placeholder="e.g. We manage the whole job from planning to completion, not just one trade."></textarea></div>
+          <p class="wiz-warn">Please tell us what sets you apart before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 13: competitors -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">What you do <span class="wiz-optional-tag">optional</span></div>
+          <p class="wiz-question">Any competitors or similar businesses worth mentioning?</p>
+          <p class="wiz-desc">Name them and tell us what you think of them, good or bad.</p>
+          <div class="field"><textarea name="competitors"></textarea></div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 14: brand crush -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">What you do <span class="wiz-optional-tag">optional</span></div>
+          <p class="wiz-question">Any brands you love the look of, in any industry?</p>
+          <p class="wiz-desc">Tell us specifically what you like about each — the words matter more than the names.</p>
+          <div class="field"><textarea name="brand_crush" placeholder="e.g. Really like how [brand] uses bold colour and simple type. Not keen on anything too corporate."></textarea></div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 15: ideal customer -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Audience & positioning</div>
+          <p class="wiz-question">Who is your ideal customer?</p>
+          <div class="field"><textarea name="ideal_customer" data-required="true" required placeholder="e.g. Homeowners in Catterick and Richmond wanting extensions or renovations done properly, without chasing multiple trades."></textarea></div>
+          <p class="wiz-warn">Please describe your ideal customer before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 16: existing feedback -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Audience & positioning <span class="wiz-optional-tag">optional</span></div>
+          <p class="wiz-question">What do customers already say about you?</p>
+          <p class="wiz-desc">Real quotes or reviews if you have them, in their own words.</p>
+          <div class="field"><textarea name="existing_customer_feedback" placeholder="e.g. 'Great quality, reliable, honest, down-to-earth'"></textarea></div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 17: one sentence / tagline -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Audience & positioning <span class="wiz-optional-tag">optional</span></div>
+          <p class="wiz-question">If a happy customer described you in one sentence, what would you want them to say?</p>
+          <div class="wiz-field-pair">
             <div class="field">
-              <label for="ideal-customer">Who is your ideal customer? <span style="color:var(--amber)">*</span></label>
-              <textarea id="ideal-customer" name="ideal_customer" required placeholder="e.g. Homeowners in Catterick and Richmond wanting extensions or renovations done properly, without chasing multiple trades."></textarea>
-            </div>
-            <div class="field">
-              <label for="customer-feedback">What do customers already say about you, in their own words?</label>
-              <textarea id="customer-feedback" name="existing_customer_feedback" placeholder="e.g. 'Great quality, reliable, honest, down-to-earth' — real quotes or reviews if you have them."></textarea>
-            </div>
-            <div class="field">
-              <label for="one-sentence">If a customer described your business to a friend in one sentence, what would you want them to say?</label>
+              <label for="one-sentence">One sentence</label>
               <input type="text" id="one-sentence" name="one_sentence_positioning">
             </div>
             <div class="field">
-              <label for="tagline-ideas">Any tagline or strapline ideas already in your head? (We'll refine or replace if not.)</label>
-              <input type="text" id="tagline-ideas" name="tagline_ideas" placeholder="e.g. Built Right / Established 2001">
+              <label for="tagline-ideas">Any tagline ideas already in mind?</label>
+              <input type="text" id="tagline-ideas" name="tagline_ideas" placeholder="e.g. Built Right">
             </div>
           </div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
         </div>
 
-        <!-- SECTION 4 -->
-        <div class="intake-section">
-          <div class="intake-section-num">Section 4 of 6</div>
-          <h3>Voice &amp; personality</h3>
-          <p class="intake-section-desc">How the brand should sound when it speaks &mdash; on your website, invoices, and social posts.</p>
-          <div class="form-stack">
+        <!-- 18: five words -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Voice & personality</div>
+          <p class="wiz-question">Give us five words for how your brand should feel.</p>
+          <div class="field"><input type="text" name="five_brand_words" data-required="true" required placeholder="e.g. Honest, solid, straightforward, local, capable"></div>
+          <p class="wiz-warn">Please add a few words before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 19: tone -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Voice & personality</div>
+          <p class="wiz-question">Which of these tones fit your brand?</p>
+          <p class="wiz-desc">Tap all that apply.</p>
+          <div class="wiz-toggle-grid">
+            <label class="wiz-toggle"><input type="checkbox" name="tone[]" value="Professional" style="display:none"><span class="tick"></span>Professional</label>
+            <label class="wiz-toggle"><input type="checkbox" name="tone[]" value="Friendly" style="display:none"><span class="tick"></span>Friendly</label>
+            <label class="wiz-toggle"><input type="checkbox" name="tone[]" value="Bold" style="display:none"><span class="tick"></span>Bold</label>
+            <label class="wiz-toggle"><input type="checkbox" name="tone[]" value="Traditional" style="display:none"><span class="tick"></span>Traditional</label>
+            <label class="wiz-toggle"><input type="checkbox" name="tone[]" value="Premium" style="display:none"><span class="tick"></span>Premium</label>
+            <label class="wiz-toggle"><input type="checkbox" name="tone[]" value="Down-to-earth" style="display:none"><span class="tick"></span>Down-to-earth</label>
+            <label class="wiz-toggle"><input type="checkbox" name="tone[]" value="Playful" style="display:none"><span class="tick"></span>Playful</label>
+            <label class="wiz-toggle"><input type="checkbox" name="tone[]" value="Authoritative" style="display:none"><span class="tick"></span>Authoritative</label>
+          </div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 20: avoid words -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Voice & personality <span class="wiz-optional-tag">optional</span></div>
+          <p class="wiz-question">Any words, phrases, or clichés we should avoid?</p>
+          <div class="field"><input type="text" name="words_to_avoid" placeholder="e.g. No 'synergy', no 'family-run' clichés"></div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 21: style direction -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Visual preferences</div>
+          <p class="wiz-question">Which style direction feels closest to right?</p>
+          <p class="wiz-desc">Tap all that apply — nothing here is final, it just steers our first direction.</p>
+          <div class="wiz-toggle-grid">
+            <label class="wiz-toggle"><input type="checkbox" name="style[]" value="Modern & minimal" style="display:none"><span class="tick"></span>Modern & minimal</label>
+            <label class="wiz-toggle"><input type="checkbox" name="style[]" value="Bold & industrial" style="display:none"><span class="tick"></span>Bold & industrial</label>
+            <label class="wiz-toggle"><input type="checkbox" name="style[]" value="Traditional & trustworthy" style="display:none"><span class="tick"></span>Traditional & trustworthy</label>
+            <label class="wiz-toggle"><input type="checkbox" name="style[]" value="Premium & elegant" style="display:none"><span class="tick"></span>Premium & elegant</label>
+            <label class="wiz-toggle"><input type="checkbox" name="style[]" value="Warm & approachable" style="display:none"><span class="tick"></span>Warm & approachable</label>
+            <label class="wiz-toggle"><input type="checkbox" name="style[]" value="Playful & creative" style="display:none"><span class="tick"></span>Playful & creative</label>
+          </div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 22: colours -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Visual preferences</div>
+          <p class="wiz-question">Any colours you love, or want to avoid?</p>
+          <div class="wiz-field-pair">
             <div class="field">
-              <label for="five-words">Five words that describe how your brand should feel <span style="color:var(--amber)">*</span></label>
-              <input type="text" id="five-words" name="five_brand_words" required placeholder="e.g. Honest, solid, straightforward, local, capable">
+              <label for="colours-love">Colours you love</label>
+              <input type="text" id="colours-love" name="colours_love" placeholder="e.g. Navy, red">
             </div>
             <div class="field">
-              <label>Which tones fit your brand? (tick all that apply)</label>
-              <div class="check-grid">
-                <label class="check-item"><input type="checkbox" name="tone[]" value="Professional"> Professional</label>
-                <label class="check-item"><input type="checkbox" name="tone[]" value="Friendly"> Friendly</label>
-                <label class="check-item"><input type="checkbox" name="tone[]" value="Bold"> Bold</label>
-                <label class="check-item"><input type="checkbox" name="tone[]" value="Traditional"> Traditional</label>
-                <label class="check-item"><input type="checkbox" name="tone[]" value="Premium"> Premium</label>
-                <label class="check-item"><input type="checkbox" name="tone[]" value="Down-to-earth"> Down-to-earth</label>
-                <label class="check-item"><input type="checkbox" name="tone[]" value="Playful"> Playful</label>
-                <label class="check-item"><input type="checkbox" name="tone[]" value="Authoritative"> Authoritative</label>
-              </div>
-            </div>
-            <div class="field">
-              <label for="avoid-words">Any words, phrases, or clich&eacute;s you want us to avoid?</label>
-              <input type="text" id="avoid-words" name="words_to_avoid" placeholder="e.g. No 'synergy', no 'family-run' clichés">
+              <label for="colours-avoid">Colours to avoid</label>
+              <input type="text" id="colours-avoid" name="colours_avoid" placeholder="e.g. Nothing neon">
             </div>
           </div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
         </div>
 
-        <!-- SECTION 5 -->
-        <div class="intake-section">
-          <div class="intake-section-num">Section 5 of 6</div>
-          <h3>Visual preferences</h3>
-          <p class="intake-section-desc">Nothing here is final &mdash; it just steers our first design direction.</p>
-          <div class="form-stack">
-            <div class="field">
-              <label>Which style direction feels closest to right? (tick all that apply)</label>
-              <div class="check-grid">
-                <label class="check-item"><input type="checkbox" name="style[]" value="Modern & minimal"> Modern &amp; minimal</label>
-                <label class="check-item"><input type="checkbox" name="style[]" value="Bold & industrial"> Bold &amp; industrial</label>
-                <label class="check-item"><input type="checkbox" name="style[]" value="Traditional & trustworthy"> Traditional &amp; trustworthy</label>
-                <label class="check-item"><input type="checkbox" name="style[]" value="Premium & elegant"> Premium &amp; elegant</label>
-                <label class="check-item"><input type="checkbox" name="style[]" value="Warm & approachable"> Warm &amp; approachable</label>
-                <label class="check-item"><input type="checkbox" name="style[]" value="Playful & creative"> Playful &amp; creative</label>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="colours-love">Colours you love / want included</label>
-                <input type="text" id="colours-love" name="colours_love" placeholder="e.g. Navy, red">
-              </div>
-              <div class="field">
-                <label for="colours-avoid">Colours to avoid</label>
-                <input type="text" id="colours-avoid" name="colours_avoid" placeholder="e.g. Nothing too bright or neon">
-              </div>
-            </div>
-            <div class="field">
-              <label for="colour-meaning">Any colour with particular meaning to you, your family, or your trade?</label>
-              <input type="text" id="colour-meaning" name="colour_meaning" placeholder="e.g. Red for safety/site signage association">
-            </div>
-            <div class="field">
-              <label for="fonts-liked">Any fonts or lettering styles you like (screenshots, other brands, hand-lettering, etc.)?</label>
-              <textarea id="fonts-liked" name="fonts_liked"></textarea>
-            </div>
+        <!-- 23: colour meaning / fonts -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Visual preferences <span class="wiz-optional-tag">optional</span></div>
+          <p class="wiz-question">Any colour with particular meaning to you, or fonts you like?</p>
+          <div class="field">
+            <label for="colour-meaning">Colour meaning</label>
+            <input type="text" id="colour-meaning" name="colour_meaning" placeholder="e.g. Red for safety/site signage association">
           </div>
-        </div>
-
-        <!-- SECTION 6 -->
-        <div class="intake-section">
-          <div class="intake-section-num">Section 6 of 6</div>
-          <h3>Practical rollout</h3>
-          <p class="intake-section-desc">Where the brand actually needs to live tells us what to prioritise and build first.</p>
-          <div class="form-stack">
-            <div class="field">
-              <label>Where will this brand be applied? (tick all that apply) <span style="color:var(--amber)">*</span></label>
-              <div class="check-grid">
-                <label class="check-item"><input type="checkbox" name="applications[]" value="Website"> Website</label>
-                <label class="check-item"><input type="checkbox" name="applications[]" value="Social media"> Social media</label>
-                <label class="check-item"><input type="checkbox" name="applications[]" value="Signage"> Signage (site boards etc.)</label>
-                <label class="check-item"><input type="checkbox" name="applications[]" value="Vehicle livery"> Vehicle livery</label>
-                <label class="check-item"><input type="checkbox" name="applications[]" value="Workwear"> Workwear</label>
-                <label class="check-item"><input type="checkbox" name="applications[]" value="Stationery / print"> Stationery / print (letterhead, cards)</label>
-                <label class="check-item"><input type="checkbox" name="applications[]" value="Invoices / quotes"> Invoice &amp; quote templates</label>
-                <label class="check-item"><input type="checkbox" name="applications[]" value="Email signature"> Email signature</label>
-                <label class="check-item"><input type="checkbox" name="applications[]" value="Other"> Other (tell us below)</label>
-              </div>
-            </div>
-            <div class="field">
-              <label for="specific-formats">Any specific sizes, quantities, or formats you already know you'll need?</label>
-              <textarea id="specific-formats" name="specific_formats" placeholder="e.g. Van is a Transit (side + rear doors), need 250 business cards, one polo shirt design for 3 staff"></textarea>
-            </div>
-            <div class="field">
-              <label for="existing-assets">Do you have existing photography, logos, or files we should work from or match?</label>
-              <textarea id="existing-assets" name="existing_assets"></textarea>
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="timeline">Deadline or target date, if any</label>
-                <input type="text" id="timeline" name="timeline" placeholder="e.g. No fixed date / Need for a job starting in 4 weeks">
-              </div>
-              <div class="field">
-                <label for="budget">Which best matches your budget expectation?</label>
-                <select id="budget" name="budget_band">
-                  <option value="" disabled selected>Select one</option>
-                  <option>Around £1,500 (core pack)</option>
-                  <option>£2,000–£3,000 (fuller rollout)</option>
-                  <option>£3,000+ (full rollout incl. signage/vehicle)</option>
-                  <option>Not sure &mdash; advise me</option>
-                </select>
-              </div>
-            </div>
-            <div class="field">
-              <label for="anything-else">Anything else we should know before we start?</label>
-              <textarea id="anything-else" name="anything_else"></textarea>
-            </div>
+          <div class="field">
+            <label for="fonts-liked">Fonts or lettering styles you like</label>
+            <textarea id="fonts-liked" name="fonts_liked"></textarea>
           </div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
         </div>
 
-        <div class="intake-submit-row">
-          <button type="submit" class="form-submit">Submit my Brand Foundation brief</button>
-          <p class="form-note">Sent straight to Velyntic. We'll confirm receipt within one working day and won't need to chase you for anything covered above.</p>
+        <!-- 24: applications -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Practical rollout</div>
+          <p class="wiz-question">Where will this brand actually be applied?</p>
+          <p class="wiz-desc">Tap all that apply — this tells us what to prioritise and build first.</p>
+          <div class="wiz-toggle-grid" data-required="true">
+            <label class="wiz-toggle"><input type="checkbox" name="applications[]" value="Website" style="display:none"><span class="tick"></span>Website</label>
+            <label class="wiz-toggle"><input type="checkbox" name="applications[]" value="Social media" style="display:none"><span class="tick"></span>Social media</label>
+            <label class="wiz-toggle"><input type="checkbox" name="applications[]" value="Signage" style="display:none"><span class="tick"></span>Signage</label>
+            <label class="wiz-toggle"><input type="checkbox" name="applications[]" value="Vehicle livery" style="display:none"><span class="tick"></span>Vehicle livery</label>
+            <label class="wiz-toggle"><input type="checkbox" name="applications[]" value="Workwear" style="display:none"><span class="tick"></span>Workwear</label>
+            <label class="wiz-toggle"><input type="checkbox" name="applications[]" value="Stationery / print" style="display:none"><span class="tick"></span>Stationery / print</label>
+            <label class="wiz-toggle"><input type="checkbox" name="applications[]" value="Invoices / quotes" style="display:none"><span class="tick"></span>Invoices & quotes</label>
+            <label class="wiz-toggle"><input type="checkbox" name="applications[]" value="Email signature" style="display:none"><span class="tick"></span>Email signature</label>
+          </div>
+          <p class="wiz-warn">Please choose at least one before continuing.</p>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 25: specific formats -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Practical rollout <span class="wiz-optional-tag">optional</span></div>
+          <p class="wiz-question">Any specific sizes, quantities, or formats you already know you'll need?</p>
+          <div class="field"><textarea name="specific_formats" placeholder="e.g. Van is a Transit (side + rear doors), need 250 business cards, one polo shirt design for 3 staff"></textarea></div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 26: existing assets -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Practical rollout <span class="wiz-optional-tag">optional</span></div>
+          <p class="wiz-question">Any existing photography, logos, or files we should work from?</p>
+          <div class="field"><textarea name="existing_assets"></textarea></div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 27: timeline / budget -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Practical rollout</div>
+          <p class="wiz-question">Any deadline, and which budget band fits best?</p>
+          <div class="field">
+            <label for="timeline">Deadline or target date <span class="wiz-optional-tag">optional</span></label>
+            <input type="text" id="timeline" name="timeline" placeholder="e.g. No fixed date / Need for a job starting in 4 weeks">
+          </div>
+          <input type="hidden" name="budget_band">
+          <div class="wiz-opts">
+            <button type="button" class="wiz-opt" data-target="budget_band" data-value="Around £1,500 (core pack)">Around £1,500 (core pack)<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="budget_band" data-value="£2,000–£3,000 (fuller rollout)">£2,000–£3,000 (fuller rollout)<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="budget_band" data-value="£3,000+ (full rollout incl. signage/vehicle)">£3,000+ (signage & vehicle included)<span class="chev">›</span></button>
+            <button type="button" class="wiz-opt" data-target="budget_band" data-value="Not sure - advise me" data-autonext="false">Not sure — advise me<span class="chev">›</span></button>
+          </div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn">Next</button></div>
+        </div>
+
+        <!-- 28: anything else + submit -->
+        <div class="wiz-step">
+          <div class="wiz-eyebrow">Last one</div>
+          <p class="wiz-question">Anything else we should know before we start?</p>
+          <div class="field"><textarea name="anything_else"></textarea></div>
+          <div class="wiz-actions"><button class="wiz-back-btn">Back</button><button class="btn btn-amber wiz-next-btn" data-submit-label="Submit my brief">Submit my brief</button></div>
         </div>
       </form>
+
+      <div class="wiz-thankyou" id="brandThankYou">
+        <div class="capture-h">&#10003; Thanks — that's everything we need.</div>
+        <p>Your Brand Foundation brief has landed with Velyntic. We'll confirm receipt within one working day, and we shouldn't need to come back to you for anything covered above.</p>
+      </div>
     </div>
     <div class="intake-back"><a href="services.html">&larr; Back to Services</a></div>
   </div>
@@ -352,5 +465,7 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/wizard.js"></script>
+<script>initWizard('brandForm', 'brandThankYou');</script>
 </body>
 </html>

@@ -11,6 +11,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75,400;100,700;100,800;100,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <style>
+    .founder-intro { padding: 88px 0; border-bottom: 1px solid var(--border-subtle); }
+    .founder-layout { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: center; }
+    .founder-photo-wrap { position: relative; }
+    .founder-photo-wrap img {
+      width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius-lg);
+      border: 1px solid var(--border-amber); display: block;
+    }
+    .founder-photo-wrap::after {
+      content: ''; position: absolute; inset: -8px; border: 1px solid rgba(245,158,11,0.12);
+      border-radius: calc(var(--radius-lg) + 8px); pointer-events: none;
+    }
+    .founder-text .section-label { margin-bottom: 14px; }
+    .founder-text h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 800; font-stretch: expanded; margin-bottom: 6px; }
+    .founder-role { font-size: 14px; color: var(--amber); font-weight: 600; margin-bottom: 16px; }
+    .founder-text p { font-size: 15.5px; color: var(--text-muted); line-height: 1.8; max-width: 560px; }
+    @media (max-width: 640px) {
+      .founder-layout { grid-template-columns: 1fr; }
+      .founder-photo-wrap { max-width: 220px; margin: 0 auto; }
+    }
+
     .about-story { padding: 88px 0; border-bottom: 1px solid var(--border-subtle); }
     .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .about-text p { font-size: 16px; color: var(--text-muted); line-height: 1.85; }
@@ -82,6 +102,23 @@
       <div class="section-label">About Velyntic</div>
       <h1>Enterprise delivery rigour.<br><em>Human-scale relationships.</em></h1>
       <p>We are not a tech startup that discovered AI last year. Velyntic is built on fifteen years of delivering complex programmes in environments where getting it wrong actually mattered.</p>
+    </div>
+  </section>
+
+  <!-- FOUNDER INTRO -->
+  <section class="founder-intro">
+    <div class="container">
+      <div class="founder-layout">
+        <div class="founder-photo-wrap">
+          <img src="assets/michael-goggs.jpg" alt="Michael Goggs, founder of Velyntic" width="800" height="800" loading="lazy">
+        </div>
+        <div class="founder-text">
+          <div class="section-label">The person behind Velyntic</div>
+          <h2>Michael Goggs</h2>
+          <div class="founder-role">Founder, Velyntic</div>
+          <p>Every engagement, every brief, every intake form on this site lands with me directly. There's no account manager layer and no hand-off to a junior team — when you work with Velyntic, you're working with the person who's actually going to do the work.</p>
+        </div>
+      </div>
     </div>
   </section>
 

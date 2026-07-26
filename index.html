@@ -41,12 +41,54 @@
     .about-text p + p { margin-top: 16px; }
     .about-text .btn { margin-top: 32px; }
 
-    @media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2,1fr); } }
+    #work { padding: 100px 0; border-bottom: 1px solid var(--border-subtle); }
+    .work-header { max-width: 640px; margin-bottom: 48px; }
+    .work-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .work-card {
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px;
+      background: var(--navy-card); transition: border-color 0.2s, background 0.2s; position: relative; overflow: hidden;
+    }
+    .work-card:hover { border-color: var(--border-amber); background: rgba(17,31,56,0.9); }
+    .work-status {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber);
+      background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.22);
+      padding: 3px 9px; border-radius: 3px; margin-bottom: 16px;
+    }
+    .work-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); }
+    .work-card h3 { font-size: 18px; font-weight: 700; font-stretch: expanded; margin-bottom: 8px; }
+    .work-card .work-scope { font-size: 12px; color: var(--text-dim); letter-spacing: 0.02em; margin-bottom: 14px; }
+    .work-card a.work-link { font-size: 13px; color: var(--amber); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .work-card a.work-link:hover { text-decoration: underline; }
+
+    #testimonials { padding: 100px 0; border-bottom: 1px solid var(--border-subtle); }
+    .testimonial-header { max-width: 640px; margin-bottom: 48px; }
+    .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .testimonial-card {
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 32px;
+      background: rgba(255,255,255,0.02); position: relative;
+    }
+    .testimonial-quote-mark {
+      font-family: 'Archivo', sans-serif; font-weight: 900; font-stretch: expanded;
+      font-size: 48px; color: rgba(245,158,11,0.25); line-height: 1; margin-bottom: 8px;
+    }
+    .testimonial-card p.t-body { font-size: 15px; color: var(--text-primary); line-height: 1.75; margin-bottom: 22px; }
+    .testimonial-attrib { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar {
+      width: 38px; height: 38px; border-radius: 50%; background: rgba(245,158,11,0.12);
+      border: 1px solid rgba(245,158,11,0.3); display: flex; align-items: center; justify-content: center;
+      font-family: 'Archivo', sans-serif; font-weight: 800; font-stretch: expanded; font-size: 14px; color: var(--amber); flex-shrink: 0;
+    }
+    .testimonial-attrib h4 { font-size: 14px; font-weight: 600; font-stretch: normal; letter-spacing: 0; margin-bottom: 2px; }
+    .testimonial-attrib span { font-size: 12.5px; color: var(--text-dim); }
+
+    @media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2,1fr); } .work-grid { grid-template-columns: 1fr; } }
     @media (max-width: 768px) {
       #hero { padding: 80px 0 60px; }
       .services-header { grid-template-columns: 1fr; gap: 0; margin-bottom: 36px; }
       .services-grid { grid-template-columns: 1fr; }
       .addee-layout, .about-layout { grid-template-columns: 1fr; gap: 48px; }
+      .testimonial-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -298,6 +340,65 @@
           <div class="credential">
             <div class="cred-icon">SME</div>
             <div><h4>Built for SMEs</h4><p>We understand SME operating conditions, data regulation, and the realities of AI adoption at this scale, wherever your business operates.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERED WORK -->
+  <section id="work">
+    <div class="container">
+      <div class="work-header">
+        <div class="section-label">Recent work</div>
+        <h2 class="section-title">Delivered, and in delivery</h2>
+        <p class="section-body">A few of the businesses we've built brand identities and websites for recently.</p>
+      </div>
+      <div class="work-grid">
+        <div class="work-card">
+          <div class="work-status">Delivered</div>
+          <h3>Mathias Auto Locksmith</h3>
+          <div class="work-scope">Web Design</div>
+          <a class="work-link" href="https://mathiasautolocksmith.co.uk" target="_blank" rel="noopener">mathiasautolocksmith.co.uk &rarr;</a>
+        </div>
+        <div class="work-card">
+          <div class="work-status">Delivered</div>
+          <h3>Coates Construction</h3>
+          <div class="work-scope">Brand Foundation &amp; Web Design</div>
+          <a class="work-link" href="https://coates-construction.co.uk" target="_blank" rel="noopener">coates-construction.co.uk &rarr;</a>
+        </div>
+        <div class="work-card">
+          <div class="work-status">Delivered</div>
+          <h3>LCW Heating</h3>
+          <div class="work-scope">Web Design</div>
+          <a class="work-link" href="https://lcwheating.co.uk" target="_blank" rel="noopener">lcwheating.co.uk &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="testimonial-header">
+        <div class="section-label">What clients say</div>
+        <h2 class="section-title">Straight from the people we've built for</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="t-body">I contacted Velyntic for a website for my business. I was very impressed with the service I received from start to finish. They were very professional and I had regular updates during the build. I would highly recommend them.</p>
+          <div class="testimonial-attrib">
+            <div class="testimonial-avatar">GM</div>
+            <div><h4>Gareth Mathias</h4><span>Mathias Auto Locksmith</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="t-body">Michael kept me involved throughout the entire process, listened to everything I wanted, and made sure the website was exactly right. I can't recommend Velyntic highly enough.</p>
+          <div class="testimonial-attrib">
+            <div class="testimonial-avatar">L</div>
+            <div><h4>Luke</h4><span>LCW Heating</span></div>
           </div>
         </div>
       </div>
