@@ -423,3 +423,107 @@ textarea { min-height: 110px; resize: vertical; }
 .wiz-thankyou { display: none; }
 .wiz-thankyou .capture-h { display: flex; align-items: center; gap: 8px; font-family: 'Archivo', sans-serif; font-stretch: expanded; font-weight: 700; font-size: 18px; color: var(--amber); }
 .wiz-thankyou p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-top: 10px; }
+
+/* ============================================================
+   WIZARD — CONTRAST IMPROVEMENTS
+   The default values are too subtle on dark backgrounds.
+   These overrides apply to intake form wizard elements only.
+   ============================================================ */
+
+/* Panel — visibly distinct card, not a transparent overlay */
+.wiz-panel {
+  background: #0E1E38;
+  border: 1px solid rgba(245,158,11,0.32);
+  box-shadow: 0 1px 24px rgba(0,0,0,0.28);
+}
+
+/* Progress track — slightly taller, more contrast */
+.wiz-track {
+  height: 8px;
+  background: rgba(255,255,255,0.08);
+}
+
+/* Cards (tier selectors) — visible in resting state */
+.wiz-card {
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+.wiz-card:hover {
+  border-color: rgba(245,158,11,0.55);
+  background: rgba(245,158,11,0.07);
+  transform: translateY(-2px);
+}
+.wiz-card.active {
+  border-color: var(--amber);
+  background: rgba(245,158,11,0.13);
+  box-shadow: 0 0 0 1px rgba(245,158,11,0.28);
+}
+
+/* Option buttons (single-select) — resting border visible */
+.wiz-opt {
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  transition: border-color 0.15s, background 0.15s, transform 0.12s;
+}
+.wiz-opt:hover {
+  border-color: rgba(245,158,11,0.55);
+  background: rgba(245,158,11,0.08);
+  transform: translateY(-1px);
+}
+.wiz-opt.active {
+  border-color: var(--amber);
+  background: rgba(245,158,11,0.12);
+}
+
+/* Toggle grid tiles (multi-select) */
+.wiz-toggle {
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  transition: border-color 0.15s, background 0.15s;
+}
+.wiz-toggle:hover {
+  border-color: rgba(245,158,11,0.45);
+  background: rgba(245,158,11,0.06);
+}
+.wiz-toggle.active {
+  border-color: var(--amber);
+  background: rgba(245,158,11,0.12);
+  color: var(--text-primary);
+}
+.wiz-toggle .tick {
+  border: 1px solid rgba(255,255,255,0.24);
+}
+.wiz-toggle.active .tick {
+  background: var(--amber);
+  border-color: var(--amber);
+}
+
+/* Input / textarea / select — clearly visible fields */
+.wiz-step input,
+.wiz-step textarea,
+.wiz-step select {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.16);
+}
+.wiz-step input:focus,
+.wiz-step textarea:focus,
+.wiz-step select:focus {
+  border-color: rgba(245,158,11,0.55);
+  background: rgba(245,158,11,0.05);
+}
+
+/* Back button — more visible */
+.wiz-back-btn {
+  border: 1px solid rgba(255,255,255,0.14);
+  color: var(--text-muted);
+}
+.wiz-back-btn:hover {
+  border-color: rgba(245,158,11,0.45);
+  color: var(--text-primary);
+}
+
+/* Thank-you state */
+.wiz-thankyou {
+  padding: 32px 0 8px;
+}
