@@ -37,12 +37,88 @@
   <a href="contact.html">Get in touch</a>
 </nav>
 
+<style>
+  .intake-hero-v2 {
+    padding: 80px 0 0;
+    border-bottom: 1px solid var(--border-subtle);
+    position: relative; overflow: hidden;
+  }
+  .intake-hero-v2::after {
+    content: 'BRAND';
+    position: absolute; right: -20px; top: 50%; transform: translateY(-50%);
+    font-family: 'Archivo', sans-serif; font-weight: 900; font-stretch: expanded;
+    font-size: 180px; color: rgba(245,158,11,0.025); letter-spacing: -0.05em;
+    pointer-events: none; user-select: none; line-height: 1;
+  }
+  .intake-hero-v2 h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    max-width: 760px; margin-bottom: 20px;
+  }
+  .intake-hero-v2 .hero-sub {
+    font-size: 18px; color: var(--text-muted);
+    max-width: 580px; line-height: 1.8; margin-bottom: 44px;
+  }
+  .intake-process-strip {
+    display: flex; gap: 0;
+    border-top: 1px solid var(--border-subtle);
+    margin-top: 12px;
+  }
+  .ips-step {
+    flex: 1; padding: 24px 28px;
+    border-right: 1px solid var(--border-subtle);
+    display: flex; align-items: flex-start; gap: 16px;
+  }
+  .ips-step:last-child { border-right: none; }
+  .ips-num {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--amber); font-weight: 700; font-size: 12px;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .ips-text h4 {
+    font-size: 14px; font-weight: 700; font-stretch: expanded;
+    margin-bottom: 4px; line-height: 1.2;
+  }
+  .ips-text p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin: 0; }
+  @media (max-width: 768px) {
+    .intake-process-strip { flex-direction: column; }
+    .ips-step { border-right: none; border-bottom: 1px solid var(--border-subtle); padding: 18px 0; }
+    .ips-step:last-child { border-bottom: none; }
+  }
+</style>
+
 <main>
-  <section class="intake-hero">
+  <section class="intake-hero-v2">
     <div class="container">
-      <div class="section-label">Brand Foundation · Client intake</div>
-      <h1 style="font-size:clamp(32px,4.5vw,52px);max-width:760px;margin-bottom:16px;">Everything we need to build your brand, one question at a time.</h1>
-      <p style="font-size:17px;color:var(--text-muted);max-width:620px;line-height:1.8;">No login, nothing saved until you submit. Most people finish in 15&ndash;20 minutes. Tap an answer where you can, type where you can't &mdash; either way, the more complete this is, the fewer questions we need to come back with.</p>
+      <div class="section-label">Brand Foundation · Project brief</div>
+      <h1>Build something people<br><em>remember you by.</em></h1>
+      <p class="hero-sub">The more complete this brief, the fewer questions we need to come back with. One question at a time — tap where you can, type where you can't. Most people finish in 15&ndash;20 minutes.</p>
+    </div>
+    <div class="container">
+      <div class="intake-process-strip">
+        <div class="ips-step">
+          <div class="ips-num">1</div>
+          <div class="ips-text">
+            <h4>You fill this in</h4>
+            <p>Tell us about your business, your audience, and what you want to feel like.</p>
+          </div>
+        </div>
+        <div class="ips-step">
+          <div class="ips-num">2</div>
+          <div class="ips-text">
+            <h4>We review it</h4>
+            <p>Your brief lands in our inbox immediately. We read every answer before starting any design work.</p>
+          </div>
+        </div>
+        <div class="ips-step">
+          <div class="ips-num">3</div>
+          <div class="ips-text">
+            <h4>Discovery call</h4>
+            <p>We'll book a short call to confirm the brief and align on direction before work begins.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

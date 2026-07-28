@@ -111,13 +111,15 @@ function initWizard(formId, thankYouId) {
   });
 
   // multi-select toggle buttons
-  form.querySelectorAll('.wiz-toggle').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      const name = btn.dataset.name;
-      const value = btn.dataset.value;
-      const checkbox = form.querySelector('input[type="checkbox"][name="' + name + '"][value="' + CSS.escape(value) + '"]');
-      if (checkbox) checkbox.checked = !checkbox.checked;
-      btn.classList.toggle('active', checkbox ? checkbox.checked : !btn.classList.contains('active'));
+  // The labels wrap their checkboxes — the browser toggles checked automatically on click.
+  // We just read the updated state in the next task and sync the .active class.
+  form.querySelectorAll('.wiz-toggle').forEach(function (lbl) {
+    lbl.addEventListener('click', function () {
+      var cb = lbl.querySelector('input[type="checkbox"]');
+      if (!cb) return;
+      setTimeout(function () {
+        lbl.classList.toggle('active', cb.checked);
+      }, 0);
     });
   });
 
