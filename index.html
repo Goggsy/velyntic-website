@@ -22,20 +22,20 @@
 
     #pillars { padding: 72px 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
 
-    #services { padding: 100px 0; border-bottom: 1px solid var(--border-subtle); }
+    #services { padding: 72px 0; border-bottom: 1px solid var(--border-subtle); }
     .services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 56px; }
     .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
     .services-footnote { margin-top: 22px; font-size: 13px; color: var(--text-dim); }
 
-    #addee-preview { padding: 100px 0; border-bottom: 1px solid var(--border-subtle); }
+    #addee-preview { padding: 72px 0; border-bottom: 1px solid var(--border-subtle); }
     .addee-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .addee-intro p { color: var(--text-muted); font-size: 16px; line-height: 1.8; margin-top: 20px; }
     .addee-intro p + p { margin-top: 16px; }
     .addee-intro .btn { margin-top: 32px; }
 
-    #signal-cta { padding: 100px 0; border-bottom: 1px solid var(--border-subtle); }
+    #signal-cta { padding: 72px 0; border-bottom: 1px solid var(--border-subtle); }
 
-    #about-preview { padding: 100px 0; border-bottom: 1px solid var(--border-subtle); }
+    #about-preview { padding: 72px 0; border-bottom: 1px solid var(--border-subtle); }
     .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .about-text p { font-size: 16px; color: var(--text-muted); line-height: 1.8; }
     .about-text p + p { margin-top: 16px; }
@@ -61,7 +61,7 @@
     .work-card a.work-link { font-size: 13px; color: var(--amber); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
     .work-card a.work-link:hover { text-decoration: underline; }
 
-    #testimonials { padding: 100px 0; border-bottom: 1px solid var(--border-subtle); }
+    #testimonials { padding: 72px 0; border-bottom: 1px solid var(--border-subtle); }
     .testimonial-header { max-width: 640px; margin-bottom: 48px; }
     .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
     .testimonial-card {
@@ -85,10 +85,12 @@
     @media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2,1fr); } .work-grid { grid-template-columns: 1fr; } }
     @media (max-width: 768px) {
       #hero { padding: 80px 0 60px; }
+      #honesty > .container > div:last-child { grid-template-columns: 1fr !important; }
       .services-header { grid-template-columns: 1fr; gap: 0; margin-bottom: 36px; }
       .services-grid { grid-template-columns: 1fr; }
       .addee-layout, .about-layout { grid-template-columns: 1fr; gap: 48px; }
       .testimonial-grid { grid-template-columns: 1fr; }
+      #honesty > .container > div:last-child { grid-template-columns: 1fr !important; }
     }
   </style>
 </head>
@@ -183,6 +185,7 @@
             <div class="svc-price-value">£2,000</div>
             <div class="svc-price-note">Fixed fee. Delivered in 5 to 7 working days.</div>
           </div>
+          <a href="signal.html" class="btn btn-amber" style="margin-top:18px;font-size:13px;padding:10px 18px;">Learn more &rarr;</a>
         </div>
         <div class="svc-card">
           <div class="svc-badge">Fast track</div>
@@ -199,10 +202,12 @@
           <div class="svc-type">Web Builds</div>
           <h3>AI Web Build</h3>
           <p>Full business websites with AI integrated throughout: intelligent forms, automation connections, CMS, and AI-driven content tools. Built to perform and built to last.</p>
+          <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:6px;padding:10px 14px;margin-bottom:16px;font-size:13px;color:var(--amber);line-height:1.5;">SIGNAL Assessment included on projects above £6,000</div>
           <div class="svc-price">
             <div class="svc-price-value">£4,500 to £12,000</div>
             <div class="svc-price-note">Scoped per project. Includes one month post-launch support.</div>
           </div>
+          <a href="web-design-intake.html" class="btn btn-amber" style="margin-top:18px;font-size:13px;padding:10px 18px;">Start your project &rarr;</a>
         </div>
         <div class="svc-card">
           <div class="svc-type">Brand</div>
@@ -212,6 +217,7 @@
             <div class="svc-price-value">From £1,500</div>
             <div class="svc-price-note">Scoped to your requirements.</div>
           </div>
+          <a href="brand-foundation-intake.html" class="btn btn-amber" style="margin-top:18px;font-size:13px;padding:10px 18px;">Start your project &rarr;</a>
         </div>
         <div class="svc-card">
           <div class="svc-type">Consultancy</div>
@@ -221,6 +227,7 @@
             <div class="svc-price-value">£850 to £1,250 <span style="font-weight:400;font-size:14px">/day</span></div>
             <div class="svc-price-note">Day rate. Project scoping available on request.</div>
           </div>
+          <a href="contact.html?service=ai-consultancy" class="btn btn-amber" style="margin-top:18px;font-size:13px;padding:10px 18px;">Discuss your needs &rarr;</a>
         </div>
         <div class="svc-card">
           <div class="svc-type">Retained</div>
@@ -230,6 +237,7 @@
             <div class="svc-price-value">From £750 <span style="font-weight:400;font-size:14px">/month</span></div>
             <div class="svc-price-note">Rolling monthly retainer. No minimum term.</div>
           </div>
+          <a href="contact.html?service=evolve-partnership" class="btn btn-amber" style="margin-top:18px;font-size:13px;padding:10px 18px;">Talk about a retainer &rarr;</a>
         </div>
       </div>
       <p class="services-footnote">All prices are exclusive of VAT. Fixed-fee services are fully scoped before any commitment is required. <a href="services.html" style="color:var(--amber);text-decoration:none;">View full service details &rarr;</a></p>
@@ -347,32 +355,75 @@
     </div>
   </section>
 
-  <!-- DELIVERED WORK -->
+  <!-- PROOF / CASE STUDY -->
   <section id="work">
     <div class="container">
       <div class="work-header">
-        <div class="section-label">Recent work</div>
-        <h2 class="section-title">Delivered, and in delivery</h2>
-        <p class="section-body">A few of the businesses we've built brand identities and websites for recently.</p>
+        <div class="section-label">Proof</div>
+        <h2 class="section-title">Ask to see working systems, not slide decks.</h2>
+        <p class="section-body">It is fair to ask what we have actually built before you spend anything. So here is the honest answer, and you are already looking at it.</p>
+      </div>
+
+      <!-- Live implementation box -->
+      <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border-amber);border-radius:var(--radius-lg);padding:32px;margin-bottom:40px;">
+        <div class="work-status" style="background:rgba(34,197,94,0.1);border-color:rgba(34,197,94,0.25);color:var(--green);"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;margin-right:6px;box-shadow:0 0 0 0 rgba(34,197,94,0.5);animation:fsPulse 2s infinite;"></span>Live implementation</div>
+        <h3 style="font-size:22px;font-weight:800;font-stretch:expanded;margin:16px 0 12px;">The site you are reading is the case study.</h3>
+        <p style="font-size:15px;color:var(--text-muted);line-height:1.8;max-width:680px;">Velyntic's website is not a brochure built on a template. It is a custom Next.js application with a governed AI feature running live in production. The SIGNAL check above scores your answers, calls a language model through a secured server route, and returns a written interpretation. The key never touches your browser, the endpoint is rate limited, and if the model is unavailable the page degrades gracefully rather than breaking.</p>
+        <div style="display:flex;gap:32px;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid var(--border-subtle);font-size:13px;color:var(--text-muted);">
+          <span style="display:flex;align-items:center;gap:6px;"><span style="color:var(--green);">&#10003;</span> Custom Next.js build, no page builder</span>
+          <span style="display:flex;align-items:center;gap:6px;"><span style="color:var(--green);">&#10003;</span> Live, governed AI feature in production</span>
+          <span style="display:flex;align-items:center;gap:6px;"><span style="color:var(--green);">&#10003;</span> Secured server route, rate limited by default</span>
+          <span style="display:flex;align-items:center;gap:6px;"><span style="color:var(--green);">&#10003;</span> Graceful degradation when the model is unavailable</span>
+        </div>
+        <p style="margin-top:16px;font-size:13px;color:var(--text-dim);display:flex;align-items:center;gap:6px;"><span style="color:var(--amber);">&rarr;</span> Client case studies are in delivery now and will be published here as they complete.</p>
+      </div>
+
+      <!-- Client cards with green delivered dots -->
+      <div class="work-header" style="margin-top:40px;">
+        <h3 class="section-title" style="font-size:clamp(22px,3vw,32px);">Who we are building for.</h3>
+        <p class="section-body">Real businesses, real work, in delivery now.</p>
       </div>
       <div class="work-grid">
         <div class="work-card">
-          <div class="work-status">Delivered</div>
+          <div class="work-status" style="background:rgba(34,197,94,0.1);border-color:rgba(34,197,94,0.25);color:var(--green);"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;margin-right:4px;"></span>Delivered</div>
           <h3>Mathias Auto Locksmith</h3>
           <div class="work-scope">Web Design</div>
           <a class="work-link" href="https://mathiasautolocksmith.co.uk" target="_blank" rel="noopener">mathiasautolocksmith.co.uk &rarr;</a>
         </div>
         <div class="work-card">
-          <div class="work-status">Delivered</div>
+          <div class="work-status" style="background:rgba(34,197,94,0.1);border-color:rgba(34,197,94,0.25);color:var(--green);"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;margin-right:4px;"></span>Delivered</div>
           <h3>Coates Construction</h3>
           <div class="work-scope">Brand Foundation &amp; Web Design</div>
           <a class="work-link" href="https://coates-construction.co.uk" target="_blank" rel="noopener">coates-construction.co.uk &rarr;</a>
         </div>
         <div class="work-card">
-          <div class="work-status">Delivered</div>
+          <div class="work-status" style="background:rgba(34,197,94,0.1);border-color:rgba(34,197,94,0.25);color:var(--green);"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;margin-right:4px;"></span>Delivered</div>
           <h3>LCW Heating</h3>
           <div class="work-scope">Web Design</div>
           <a class="work-link" href="https://lcwheating.co.uk" target="_blank" rel="noopener">lcwheating.co.uk &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT AI WILL NOT DO -->
+  <section id="honesty" style="padding:80px 0;border-bottom:1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-label">Honestly</div>
+      <h2 class="section-title">What AI will not do for you.</h2>
+      <p class="section-body" style="margin-bottom:36px;">Every consultancy will tell you what AI can do. Fewer will tell you where it falls down, or when you should not buy it at all. Here is where we will push back.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+        <div style="background:var(--navy-card);border:1px solid var(--border-subtle);border-top:3px solid var(--amber);border-radius:var(--radius-lg);padding:28px;">
+          <h3 style="font-size:16px;font-weight:700;font-stretch:expanded;margin-bottom:10px;">AI will not fix a broken process</h3>
+          <p style="font-size:14px;color:var(--text-muted);line-height:1.75;">Automating a process that does not work simply produces bad output faster. If we find the real problem is the process, we will tell you, and fixing that may not need AI at all.</p>
+        </div>
+        <div style="background:var(--navy-card);border:1px solid var(--border-subtle);border-top:3px solid var(--amber);border-radius:var(--radius-lg);padding:28px;">
+          <h3 style="font-size:16px;font-weight:700;font-stretch:expanded;margin-bottom:10px;">Sometimes the honest answer is no</h3>
+          <p style="font-size:14px;color:var(--text-muted);line-height:1.75;">Most UK businesses cite no identified need as their main barrier to AI, and sometimes they are right. If an assessment finds AI is not where your money should go this year, that is what the report will say.</p>
+        </div>
+        <div style="background:var(--navy-card);border:1px solid var(--border-subtle);border-top:3px solid var(--amber);border-radius:var(--radius-lg);padding:28px;">
+          <h3 style="font-size:16px;font-weight:700;font-stretch:expanded;margin-bottom:10px;">Off-the-shelf tools often win</h3>
+          <p style="font-size:14px;color:var(--text-muted);line-height:1.75;">A lot of what a small business needs is a well-configured tool and an hour of training, not a bespoke build. We will recommend that route when it is the right one, even though it earns us less.</p>
         </div>
       </div>
     </div>
@@ -402,6 +453,14 @@
             <div><h4>Luke</h4><span>LCW Heating</span></div>
           </div>
         </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="t-body">Michael built a website for my construction business, all very straight forward, nothing was a problem with changing and adding bits to it, turned out perfect, would definitely recommend Velyntic to anyone, five star review.</p>
+          <div class="testimonial-attrib">
+            <div class="testimonial-avatar">NC</div>
+            <div><h4>Neil Coates</h4><span>Coates Construction</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -416,6 +475,8 @@
       <li><a href="about.html">About</a></li>
       <li><a href="signal.html">SIGNAL</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
     </ul>
     <span class="footer-status"><span class="fs-dot"></span>Systems Operational</span>
     <p class="footer-copy">&copy; 2026 Velyntic. People-first AI adoption for SMEs.</p>
