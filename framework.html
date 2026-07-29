@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The ADDEE Framework | Velyntic</title>
+  <meta name="description" content="ADDEE: Assess, Design, Deliver, Embed, Evolve. Velyntic's delivery framework for AI adoption that is built for continuous improvement, not one-time delivery.">
+  <link rel="icon" type="image/png" href="assets/velyntic-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75,400;100,700;100,800;100,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .flow-section { padding: 72px 0; border-bottom: 1px solid var(--border-subtle); }
+    .flow-diagram { display: flex; align-items: stretch; margin-top: 40px; flex-wrap: wrap; gap: 4px; }
+    .flow-node { flex: 1; min-width: 130px; background: var(--navy-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 22px 16px; text-align: center; }
+    .flow-node.first { border-color: var(--border-amber); background: rgba(245,158,11,0.05); }
+    .flow-node .fn-n { font-size: 11px; color: var(--text-dim); letter-spacing: 0.14em; }
+    .flow-node .fn-name { font-family: 'Archivo', sans-serif; font-weight: 700; font-stretch: expanded; font-size: 16px; margin-top: 8px; }
+    .flow-node .fn-sub { font-size: 10px; letter-spacing: 0.12em; color: var(--amber); margin-top: 6px; text-transform: uppercase; }
+    .flow-arrow { display: flex; align-items: center; color: var(--border-subtle); font-size: 20px; padding: 0 2px; }
+    .loop-note { margin-top: 24px; font-size: 14px; color: var(--text-muted); display: flex; align-items: center; gap: 10px; }
+    .loop-note-icon { color: var(--amber); font-size: 16px; }
+
+    .stage-section { padding: 72px 0; border-bottom: 1px solid var(--border-subtle); }
+    .stage-full { display: grid; grid-template-columns: 100px 1fr; gap: 28px; padding: 36px 0; border-bottom: 1px solid var(--border-subtle); }
+    .stage-full:last-child { border-bottom: none; }
+    .stage-full-letter { width: 64px; height: 64px; border-radius: 50%; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.28); display: flex; align-items: center; justify-content: center; font-family: 'Archivo', sans-serif; font-weight: 900; font-stretch: expanded; font-size: 22px; color: var(--amber); }
+    .stage-full-body h3 { font-size: 22px; font-weight: 800; font-stretch: expanded; margin-bottom: 6px; }
+    .stage-full-sub { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--amber); text-transform: uppercase; margin-bottom: 14px; }
+    .stage-full-body p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 10px; }
+    .stage-full-body ul { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+    .stage-full-body li { font-size: 14px; color: var(--text-muted); line-height: 1.6; display: flex; gap: 10px; }
+    .stage-full-body li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); flex-shrink: 0; margin-top: 7px; }
+
+    @media (max-width: 640px) {
+      .stage-full { grid-template-columns: 1fr; }
+      .stage-full-letter { margin-bottom: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<header id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/velyntic-logo-lockup.png" alt="Velyntic"></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="approach.html">Approach</a></li>
+        <li><a href="framework.html" class="active">Framework</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="signal.html">SIGNAL</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in touch</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="nav-drawer" id="navDrawer">
+  <a href="services.html">Services</a>
+  <a href="approach.html">Approach</a>
+  <a href="framework.html">Framework</a>
+  <a href="work.html">Work</a>
+  <a href="about.html">About</a>
+  <a href="signal.html">SIGNAL</a>
+  <a href="contact.html">Get in touch</a>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label">Our framework</div>
+      <h1>ADDEE: built for the long run.</h1>
+      <p>Most AI engagements have a clear beginning and an abrupt end. ADDEE is designed differently. Every stage feeds into the next, and EVOLVE loops back into Assess, creating a continuous improvement cycle rather than a one-time intervention.</p>
+    </div>
+  </section>
+
+  <!-- FLOW DIAGRAM -->
+  <section class="flow-section">
+    <div class="container">
+      <div class="section-label">The full cycle</div>
+      <h2 class="section-title">Five stages. One continuous loop.</h2>
+      <div class="flow-diagram">
+        <div class="flow-node first">
+          <div class="fn-n">01</div>
+          <div class="fn-name">Assess</div>
+          <div class="fn-sub">SIGNAL</div>
+        </div>
+        <div class="flow-arrow">&rsaquo;</div>
+        <div class="flow-node">
+          <div class="fn-n">02</div>
+          <div class="fn-name">Design</div>
+        </div>
+        <div class="flow-arrow">&rsaquo;</div>
+        <div class="flow-node">
+          <div class="fn-n">03</div>
+          <div class="fn-name">Deliver</div>
+        </div>
+        <div class="flow-arrow">&rsaquo;</div>
+        <div class="flow-node">
+          <div class="fn-n">04</div>
+          <div class="fn-name">Embed</div>
+        </div>
+        <div class="flow-arrow">&rsaquo;</div>
+        <div class="flow-node">
+          <div class="fn-n">05</div>
+          <div class="fn-name">EVOLVE</div>
+        </div>
+      </div>
+      <div class="loop-note"><span class="loop-note-icon">&#8635;</span>EVOLVE returns to Assess. Your SIGNAL is re-measured each loop, so progress is visible, not assumed.</div>
+    </div>
+  </section>
+
+  <!-- FULL STAGE BREAKDOWN -->
+  <section class="stage-section">
+    <div class="container">
+      <div class="section-label">Stage by stage</div>
+      <h2 class="section-title">What actually happens at each stage.</h2>
+      <p class="section-body" style="margin-bottom:8px;">No stage is a formality. Each one has a defined output that feeds directly into the next.</p>
+
+      <div class="stage-full">
+        <div class="stage-full-letter">A</div>
+        <div class="stage-full-body">
+          <h3>Assess</h3>
+          <div class="stage-full-sub">Delivered via the SIGNAL Assessment</div>
+          <p>Understand your operations, your team, and your genuine readiness before anything is proposed. No assumptions, no templates, no generic industry playbook applied to your business without checking it actually fits.</p>
+          <ul>
+            <li>Discovery session with your key stakeholders</li>
+            <li>Operations and workflow mapping across core business functions</li>
+            <li>AI readiness scoring across people, process, data, governance, and technology</li>
+            <li>Three to five priority use cases identified, with honest effort and value estimates</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage-full">
+        <div class="stage-full-letter">D</div>
+        <div class="stage-full-body">
+          <h3>Design</h3>
+          <div class="stage-full-sub">Architecture and planning</div>
+          <p>Architect the right solution collaboratively with your team: tools, automations, governance structures, and how everything integrates with what you already use. Nothing gets built until the design is agreed in writing.</p>
+          <ul>
+            <li>Solution architecture scoped against your SIGNAL findings</li>
+            <li>Tool and platform selection, with a clear rationale for each choice</li>
+            <li>Governance framework designed alongside the technical build, not bolted on afterwards</li>
+            <li>A written proposal with defined deliverables, timeline, and price before work begins</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage-full">
+        <div class="stage-full-letter">D</div>
+        <div class="stage-full-body">
+          <h3>Deliver</h3>
+          <div class="stage-full-sub">Build and implementation</div>
+          <p>Build and implement with precision. Fast, but never at the expense of quality or governance. You get regular updates throughout, not a single reveal at the end.</p>
+          <ul>
+            <li>Development against the agreed design, with milestone check-ins</li>
+            <li>Testing against real-world scenarios, not just happy-path demos</li>
+            <li>Security and governance controls built in from the first commit, not retrofitted</li>
+            <li>A working system, not a prototype dressed up as a finished product</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage-full">
+        <div class="stage-full-letter">E</div>
+        <div class="stage-full-body">
+          <h3>Embed</h3>
+          <div class="stage-full-sub">Training and adoption</div>
+          <p>Train your people, document your systems, and make the new way of working a genuine part of how your business runs day to day. A system nobody uses is a wasted investment, so this stage gets real time and attention.</p>
+          <ul>
+            <li>Hands-on training sessions for your team, not a video link and a PDF</li>
+            <li>Full documentation so the knowledge survives staff turnover</li>
+            <li>A defined handover, with clear ownership of every account and system</li>
+            <li>An initial adoption check-in, typically two to four weeks after go-live</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage-full">
+        <div class="stage-full-letter">E</div>
+        <div class="stage-full-body">
+          <h3>EVOLVE</h3>
+          <div class="stage-full-sub">Continuous improvement</div>
+          <p>Monitor, optimise, and iterate. EVOLVE loops back into Assess, so your business gets a re-measured SIGNAL score and a fresh, honest look at what should happen next, rather than being left to work it out alone.</p>
+          <ul>
+            <li>Monthly performance review of what is working and what is not</li>
+            <li>AI system optimisation as tools and models genuinely improve</li>
+            <li>New use case identification as your business grows or changes direction</li>
+            <li>Quarterly SIGNAL review: a lighter re-assessment that resets priorities</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding: 72px 0;">
+    <div class="container">
+      <div class="signal-box">
+        <div class="section-label">Ready to start the cycle?</div>
+        <h2 class="section-title">Every ADDEE cycle starts with SIGNAL.</h2>
+        <p class="section-body" style="margin-bottom:36px;">You cannot design a solution to a problem you have not properly assessed. SIGNAL is the fixed-fee entry point that makes the rest of ADDEE possible.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="signal.html" class="btn btn-amber">Learn about SIGNAL</a>
+          <a href="approach.html" class="btn btn-outline">See our approach</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="index.html" class="footer-logo"><img src="assets/velyntic-logo-lockup.png" alt="Velyntic"></a>
+    <ul class="footer-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="signal.html">SIGNAL</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+    <span class="footer-status"><span class="fs-dot"></span>Systems operational</span>
+    <p class="footer-copy">&copy; 2026 Velyntic. People-first AI adoption for SMEs.</p>
+  </div>
+  <div class="footer-credit">
+    <div class="footer-credit-inner">
+      Designed &amp; built by
+      <img src="assets/velyntic-mark.png" alt="Velyntic mark">
+      <strong>VELYNTIC</strong>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

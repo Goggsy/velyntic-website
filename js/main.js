@@ -45,3 +45,17 @@ document.querySelectorAll('.nav-links a, .nav-drawer a').forEach(link => {
     link.classList.add('active');
   }
 });
+
+// Pre-select service dropdown on contact page from ?service= query param
+const params = new URLSearchParams(window.location.search);
+const preselect = params.get('service');
+if (preselect) {
+  const serviceSelect = document.getElementById('service');
+  if (serviceSelect) {
+    const match = Array.from(serviceSelect.options).find(o =>
+      o.value.toLowerCase().replace(/\s+/g, '-') === preselect.toLowerCase()
+      || o.value.toLowerCase() === preselect.toLowerCase().replace(/-/g, ' ')
+    );
+    if (match) serviceSelect.value = match.value;
+  }
+}

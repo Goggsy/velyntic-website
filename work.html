@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work | Velyntic</title>
+  <meta name="description" content="Real businesses Velyntic is building for right now, plus the honest proof behind our claims: this site is itself a live, governed AI implementation.">
+  <link rel="icon" type="image/png" href="assets/velyntic-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75,400;100,700;100,800;100,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    #work { padding: 72px 0; border-bottom: 1px solid var(--border-subtle); }
+    .work-header { max-width: 640px; margin-bottom: 48px; }
+    .work-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .work-card {
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px;
+      background: var(--navy-card); transition: border-color 0.2s, background 0.2s; position: relative; overflow: hidden;
+    }
+    .work-card:hover { border-color: var(--border-amber); background: rgba(17,31,56,0.9); }
+    .work-card h3 { font-size: 18px; font-weight: 700; font-stretch: expanded; margin-bottom: 8px; }
+    .work-card .work-scope { font-size: 12px; color: var(--text-dim); letter-spacing: 0.02em; margin-bottom: 14px; }
+    .work-card a.work-link { font-size: 13px; color: var(--amber); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .work-card a.work-link:hover { text-decoration: underline; }
+
+    #testimonials { padding: 72px 0; }
+    .testimonial-header { max-width: 640px; margin-bottom: 48px; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .testimonial-card {
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 32px;
+      background: rgba(255,255,255,0.02); position: relative;
+    }
+    .testimonial-quote-mark {
+      font-family: 'Archivo', sans-serif; font-weight: 900; font-stretch: expanded;
+      font-size: 48px; color: rgba(245,158,11,0.25); line-height: 1; margin-bottom: 8px;
+    }
+    .testimonial-card p.t-body { font-size: 15px; color: var(--text-primary); line-height: 1.75; margin-bottom: 22px; }
+    .testimonial-attrib { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar {
+      width: 38px; height: 38px; border-radius: 50%; background: rgba(245,158,11,0.12);
+      border: 1px solid rgba(245,158,11,0.3); display: flex; align-items: center; justify-content: center;
+      font-family: 'Archivo', sans-serif; font-weight: 800; font-stretch: expanded; font-size: 14px; color: var(--amber); flex-shrink: 0;
+    }
+    .testimonial-attrib h4 { font-size: 14px; font-weight: 600; font-stretch: normal; letter-spacing: 0; margin-bottom: 2px; }
+    .testimonial-attrib span { font-size: 12.5px; color: var(--text-dim); }
+
+    @media (max-width: 1024px) { .work-grid, .testimonial-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/velyntic-logo-lockup.png" alt="Velyntic"></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="approach.html">Approach</a></li>
+        <li><a href="framework.html">Framework</a></li>
+        <li><a href="work.html" class="active">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="signal.html">SIGNAL</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in touch</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="nav-drawer" id="navDrawer">
+  <a href="services.html">Services</a>
+  <a href="approach.html">Approach</a>
+  <a href="framework.html">Framework</a>
+  <a href="work.html">Work</a>
+  <a href="about.html">About</a>
+  <a href="signal.html">SIGNAL</a>
+  <a href="contact.html">Get in touch</a>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label">Proof</div>
+      <h1>Ask to see working systems,<br><em>not slide decks.</em></h1>
+      <p>It is fair to ask what we have actually built before you spend anything. So here is the honest answer, and you are already looking at it.</p>
+    </div>
+  </section>
+
+  <!-- PROOF / CASE STUDY -->
+  <section id="work">
+    <div class="container">
+      <!-- Live implementation box -->
+      <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border-amber);border-radius:var(--radius-lg);padding:32px;margin-bottom:40px;">
+        <div class="badge-live"><span class="badge-live-dot"></span>Live implementation</div>
+        <h3 style="font-size:22px;font-weight:800;font-stretch:expanded;margin:16px 0 12px;">The site you are reading is the case study.</h3>
+        <p style="font-size:15px;color:var(--text-muted);line-height:1.8;max-width:680px;">Velyntic's website is not a brochure built on a template. It is a custom Next.js application with a governed AI feature running live in production. The SIGNAL check on our SIGNAL page scores your answers, calls a language model through a secured server route, and returns a written interpretation. The key never touches your browser, the endpoint is rate limited, and if the model is unavailable the page degrades gracefully rather than breaking.</p>
+        <div style="display:flex;gap:32px;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid var(--border-subtle);font-size:13px;color:var(--text-muted);">
+          <span style="display:flex;align-items:center;gap:6px;"><span style="color:var(--green);">&#10003;</span> Custom Next.js build, no page builder</span>
+          <span style="display:flex;align-items:center;gap:6px;"><span style="color:var(--green);">&#10003;</span> Live, governed AI feature in production</span>
+          <span style="display:flex;align-items:center;gap:6px;"><span style="color:var(--green);">&#10003;</span> Secured server route, rate limited by default</span>
+          <span style="display:flex;align-items:center;gap:6px;"><span style="color:var(--green);">&#10003;</span> Graceful degradation when the model is unavailable</span>
+        </div>
+        <p style="margin-top:16px;font-size:13px;color:var(--text-dim);display:flex;align-items:center;gap:6px;"><span style="color:var(--amber);">&rarr;</span> Client case studies are in delivery now and will be published here as they complete.</p>
+      </div>
+
+      <!-- Client cards with green delivered badges -->
+      <div class="work-header" style="margin-top:40px;">
+        <h2 class="section-title" style="font-size:clamp(22px,3vw,32px);">Who we are building for.</h2>
+        <p class="section-body">Real businesses, real work, in delivery now.</p>
+      </div>
+      <div class="work-grid">
+        <div class="work-card">
+          <div class="badge-live"><span class="badge-live-dot"></span>Delivered</div>
+          <h3>Mathias Auto Locksmith</h3>
+          <div class="work-scope">Web Design</div>
+          <a class="work-link" href="https://mathiasautolocksmith.co.uk" target="_blank" rel="noopener">mathiasautolocksmith.co.uk &rarr;</a>
+        </div>
+        <div class="work-card">
+          <div class="badge-live"><span class="badge-live-dot"></span>Delivered</div>
+          <h3>Coates Construction</h3>
+          <div class="work-scope">Brand Foundation &amp; Web Design</div>
+          <a class="work-link" href="https://coates-construction.co.uk" target="_blank" rel="noopener">coates-construction.co.uk &rarr;</a>
+        </div>
+        <div class="work-card">
+          <div class="badge-live"><span class="badge-live-dot"></span>Delivered</div>
+          <h3>LCW Heating</h3>
+          <div class="work-scope">Web Design</div>
+          <a class="work-link" href="https://lcwheating.co.uk" target="_blank" rel="noopener">lcwheating.co.uk &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="testimonial-header">
+        <div class="section-label">What clients say</div>
+        <h2 class="section-title">Straight from the people we've built for</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="t-body">I contacted Velyntic for a website for my business. I was very impressed with the service I received from start to finish. They were very professional and I had regular updates during the build. I would highly recommend them.</p>
+          <div class="testimonial-attrib">
+            <div class="testimonial-avatar">GM</div>
+            <div><h4>Gareth Mathias</h4><span>Mathias Auto Locksmith</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="t-body">Michael kept me involved throughout the entire process, listened to everything I wanted, and made sure the website was exactly right. I can't recommend Velyntic highly enough.</p>
+          <div class="testimonial-attrib">
+            <div class="testimonial-avatar">L</div>
+            <div><h4>Luke</h4><span>LCW Heating</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="t-body">Michael built a website for my construction business, all very straight forward, nothing was a problem with changing and adding bits to it, turned out perfect, would definitely recommend Velyntic to anyone, five star review.</p>
+          <div class="testimonial-attrib">
+            <div class="testimonial-avatar">NC</div>
+            <div><h4>Neil Coates</h4><span>Coates Construction</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="index.html" class="footer-logo"><img src="assets/velyntic-logo-lockup.png" alt="Velyntic"></a>
+    <ul class="footer-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="signal.html">SIGNAL</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+    <span class="footer-status"><span class="fs-dot"></span>Systems operational</span>
+    <p class="footer-copy">&copy; 2026 Velyntic. People-first AI adoption for SMEs.</p>
+  </div>
+  <div class="footer-credit">
+    <div class="footer-credit-inner">
+      Designed &amp; built by
+      <img src="assets/velyntic-mark.png" alt="Velyntic mark">
+      <strong>VELYNTIC</strong>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

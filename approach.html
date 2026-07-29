@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Approach | Velyntic</title>
+  <meta name="description" content="How Velyntic works: what you can hold us to, our commitment to honesty about AI's limitations, and the principles of governed, people-first delivery.">
+  <link rel="icon" type="image/png" href="assets/velyntic-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75,400;100,700;100,800;100,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .commits-section { padding: 72px 0; border-bottom: 1px solid var(--border-subtle); }
+    .commits-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; margin-top: 48px; }
+    .commit-card { background: var(--navy-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 32px; transition: border-color 0.2s; }
+    .commit-card:hover { border-color: var(--border-amber); }
+    .commit-card h3 { font-size: 17px; font-weight: 700; font-stretch: expanded; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .commit-icon { width: 32px; height: 32px; background: rgba(245,158,11,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--amber); font-size: 15px; flex-shrink: 0; }
+    .commit-card p { font-size: 14.5px; color: var(--text-muted); line-height: 1.8; }
+
+    .principles-section { padding: 72px 0; border-bottom: 1px solid var(--border-subtle); }
+    .principles-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border-subtle); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; margin-top: 48px; }
+    .principle { background: var(--navy); padding: 32px 26px; transition: background 0.18s; }
+    .principle:hover { background: var(--navy-raised); }
+    .principle-num { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--amber); margin-bottom: 14px; }
+    .principle h3 { font-size: 16px; font-weight: 700; font-stretch: expanded; margin-bottom: 10px; }
+    .principle p { font-size: 13.5px; color: var(--text-muted); line-height: 1.7; }
+
+    .governed-section { padding: 72px 0; border-bottom: 1px solid var(--border-subtle); }
+    .governed-chips { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+    .governed-chip { display: flex; align-items: center; gap: 10px; font-size: 14px; background: var(--navy-card); border: 1px solid var(--border-subtle); border-radius: var(--radius); padding: 14px 20px; }
+    .governed-chip-icon { color: var(--amber); font-size: 16px; }
+
+    .honesty-full { padding: 72px 0; }
+    .honesty-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 36px; }
+    .honesty-card { background: var(--navy-card); border: 1px solid var(--border-subtle); border-top: 3px solid var(--amber); border-radius: var(--radius-lg); padding: 28px; }
+    .honesty-card h3 { font-size: 16px; font-weight: 700; font-stretch: expanded; margin-bottom: 10px; }
+    .honesty-card p { font-size: 14px; color: var(--text-muted); line-height: 1.75; }
+
+    @media (max-width: 1024px) { .principles-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 768px) {
+      .commits-grid { grid-template-columns: 1fr; }
+      .principles-grid { grid-template-columns: 1fr; }
+      .honesty-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/velyntic-logo-lockup.png" alt="Velyntic"></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="approach.html" class="active">Approach</a></li>
+        <li><a href="framework.html">Framework</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="signal.html">SIGNAL</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in touch</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="nav-drawer" id="navDrawer">
+  <a href="services.html">Services</a>
+  <a href="approach.html">Approach</a>
+  <a href="framework.html">Framework</a>
+  <a href="work.html">Work</a>
+  <a href="about.html">About</a>
+  <a href="signal.html">SIGNAL</a>
+  <a href="contact.html">Get in touch</a>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label">How we work</div>
+      <h1>What you can hold us to.</h1>
+      <p>Anyone can promise good delivery. We would rather tell you specifically what to expect, and let you judge us against it.</p>
+    </div>
+  </section>
+
+  <!-- COMMITMENTS -->
+  <section class="commits-section">
+    <div class="container">
+      <div class="section-label">Our commitments</div>
+      <h2 class="section-title">Four things we will not compromise on.</h2>
+      <p class="section-body">These are not marketing lines. They are the standard we ask you to measure every engagement against, from a first phone call through to the last invoice.</p>
+      <div class="commits-grid">
+        <div class="commit-card">
+          <h3><span class="commit-icon">&#9673;</span>We listen before we pitch</h3>
+          <p>Every engagement starts with discovery. We will not propose a solution before we understand your operations, your people, and what you are actually trying to fix. If we recommend something in the first conversation, that is a red flag, not a good sign.</p>
+        </div>
+        <div class="commit-card">
+          <h3><span class="commit-icon">&#128172;</span>We speak your language</h3>
+          <p>No talk of large language models, transformers, or agents unless you want to go there. If we cannot explain something in plain English, we do not understand it well enough yet to be charging you for it.</p>
+        </div>
+        <div class="commit-card">
+          <h3><span class="commit-icon">&#128296;</span>We build working things</h3>
+          <p>There is a difference between a consultancy that hands you a strategy deck and one that ships. The AI feature on our own site is ours, built by us, running live in production, not a mock-up for a sales call.</p>
+        </div>
+        <div class="commit-card">
+          <h3><span class="commit-icon">&#9888;</span>We are honest about limitations</h3>
+          <p>AI cannot solve everything. We will flag the risks, name the things that will not work, and tell you when the answer is no, even when saying yes would be more profitable for us in the short term.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUR PRINCIPLES -->
+  <section class="principles-section">
+    <div class="container">
+      <div class="section-label">Our foundations</div>
+      <h2 class="section-title">Four principles behind everything we deliver.</h2>
+      <p class="section-body">These sit underneath the ADDEE framework and shape how every stage is actually run, not just what it is called.</p>
+      <div class="principles-grid">
+        <div class="principle">
+          <div class="principle-num">01</div>
+          <h3>People First</h3>
+          <p>Technology serves your team, not the other way around. Every recommendation starts with your people, your workflows, and your culture, not a generic playbook.</p>
+        </div>
+        <div class="principle">
+          <div class="principle-num">02</div>
+          <h3>Governed by Default</h3>
+          <p>Responsible AI is not a bolt-on feature we add if you ask nicely. Oversight, transparency, and ethical guard-rails are built into every engagement from day one.</p>
+        </div>
+        <div class="principle">
+          <div class="principle-num">03</div>
+          <h3>Delivered and Evolved</h3>
+          <p>We do not drop a solution and disappear. The ADDEE framework is built for continuous improvement, with EVOLVE looping back into Assess so progress stays visible.</p>
+        </div>
+        <div class="principle">
+          <div class="principle-num">04</div>
+          <h3>Built for Longevity</h3>
+          <p>No lock-in, no bloat, no dependency on us to keep functioning. Everything we build is designed to grow with your business and remain fully in your hands.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOVERNED BY DEFAULT -->
+  <section class="governed-section">
+    <div class="container">
+      <div class="section-label">Governed by default</div>
+      <h2 class="section-title">Governance is not paperwork. It is how we work.</h2>
+      <p class="section-body">Every engagement is delivered with the same underlying discipline, regardless of size or budget.</p>
+      <div class="governed-chips">
+        <span class="governed-chip"><span class="governed-chip-icon">&#128274;</span>Security-led delivery</span>
+        <span class="governed-chip"><span class="governed-chip-icon">&#9878;</span>Governance and compliance</span>
+        <span class="governed-chip"><span class="governed-chip-icon">&#128101;</span>People and adoption</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONESTY -->
+  <section class="honesty-full">
+    <div class="container">
+      <div class="section-label">Honestly</div>
+      <h2 class="section-title">What AI will not do for you.</h2>
+      <p class="section-body">Every consultancy will tell you what AI can do. Fewer will tell you where it falls down, or when you should not buy it at all. Here is where we will push back, every time.</p>
+      <div class="honesty-grid">
+        <div class="honesty-card">
+          <h3>AI will not fix a broken process</h3>
+          <p>Automating a process that does not work simply produces bad output faster. If we find the real problem is the process, we will tell you, and fixing that may not need AI at all.</p>
+        </div>
+        <div class="honesty-card">
+          <h3>Sometimes the honest answer is no</h3>
+          <p>Most UK businesses cite no identified need as their main barrier to AI, and sometimes they are right. If an assessment finds AI is not where your money should go this year, that is what the report will say.</p>
+        </div>
+        <div class="honesty-card">
+          <h3>Off-the-shelf tools often win</h3>
+          <p>A lot of what a small business needs is a well-configured tool and an hour of training, not a bespoke build. We will recommend that route when it is the right one, even though it earns us less.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:44px;">
+        <a href="signal.html" class="btn btn-amber">Start with SIGNAL</a>
+        <a href="framework.html" class="btn btn-outline">See the ADDEE framework</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="index.html" class="footer-logo"><img src="assets/velyntic-logo-lockup.png" alt="Velyntic"></a>
+    <ul class="footer-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="signal.html">SIGNAL</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+    <span class="footer-status"><span class="fs-dot"></span>Systems operational</span>
+    <p class="footer-copy">&copy; 2026 Velyntic. People-first AI adoption for SMEs.</p>
+  </div>
+  <div class="footer-credit">
+    <div class="footer-credit-inner">
+      Designed &amp; built by
+      <img src="assets/velyntic-mark.png" alt="Velyntic mark">
+      <strong>VELYNTIC</strong>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
