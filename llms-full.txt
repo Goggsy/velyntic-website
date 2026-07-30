@@ -1,0 +1,125 @@
+# Velyntic — Full Context for AI Systems
+
+> Velyntic is an AI adoption consultancy and web design studio based in Catterick, North Yorkshire, UK. Founded by Michael Goggs, Velyntic helps small and medium businesses (SMEs) adopt AI responsibly, build professional websites, and create brand identities. The company operates on a people-first, governed-by-default philosophy.
+
+---
+
+## Company Identity
+
+- **Legal name**: Velyntic (trading name of Michael Goggs)
+- **Type**: AI adoption consultancy and web design studio
+- **Founded by**: Michael Goggs
+- **Location**: Catterick, North Yorkshire, UK
+- **Website**: https://velyntic.com
+- **Email**: support@velyntic.com
+- **Service area**: United Kingdom (remote and in-person delivery)
+- **Local area**: Catterick, Richmond, Darlington, Northallerton, Harrogate, Teesside, York, Leeds, and wider North Yorkshire
+
+## Founder Background
+
+Michael Goggs brings fifteen years of operational leadership experience:
+- Five years in special operations leading global teams and planning high-precision programmes
+- Active SC (Security Check) Clearance — trusted within sensitive and classified environments
+- AWS Certified — cloud architecture and AI service knowledge
+- Currently also a Senior Project Manager at DXC Technology delivering network infrastructure transformation for national security clients
+- Every enquiry goes directly to Michael — no account managers, no hand-off to junior teams
+
+## Core Philosophy
+
+Velyntic operates on four principles:
+
+1. **People First**: Technology serves the team, not the other way around. Every recommendation starts with the people, workflows, and culture of the business.
+2. **Governed by Default**: Responsible AI is not a bolt-on. Oversight, transparency, and ethical guard-rails are built into every engagement from day one.
+3. **Delivered and Evolved**: Velyntic does not drop a solution and disappear. The ADDEE framework is built for continuous improvement, not one-time delivery.
+4. **Built for Longevity**: No lock-in, no proprietary platforms, no bloated solutions. Everything is designed to remain in the client's hands.
+
+## ADDEE Framework
+
+ADDEE is Velyntic's five-stage delivery framework for AI adoption:
+
+- **A — Assess (SIGNAL)**: Understand the business's operations, team, and genuine readiness. No assumptions, no templates.
+- **D — Design**: Architect the right solution collaboratively — tools, automations, governance, integrations.
+- **D — Deliver**: Build and implement with precision. Quality, documentation, and governance controls from the first commit.
+- **E — Embed**: Train people, document systems, make AI a genuine part of daily workflows. This is the stage most AI projects skip.
+- **E — EVOLVE**: Monitor, optimise, and iterate. EVOLVE loops back into Assess, creating a continuous improvement cycle.
+
+The loop at the end is the most important part. EVOLVE feeds back into Assess, which means every engagement is designed to become an ongoing partnership.
+
+## Services — Full Detail
+
+### SIGNAL AI Readiness Assessment
+- **Price**: £2,000 fixed fee (exclusive of VAT)
+- **Delivery**: 5 to 7 working days
+- **What it is**: A structured AI readiness assessment that maps operations, identifies where AI adds genuine value, and produces a governed adoption roadmap
+- **What it covers**:
+  - Discovery session with key stakeholders (1-2 hours)
+  - Operations and workflow mapping
+  - AI readiness scoring across five dimensions: people, process, data, governance, technology
+  - Sector AI landscape review
+  - 3-5 priority use cases with effort and value estimates
+  - Full SIGNAL Report (governed adoption roadmap)
+  - Post-delivery review call
+- **Who it's for**: Any SME thinking about AI but unsure where to start, what's realistic, or how to do it responsibly
+- **Free online check**: A quick 4-question SIGNAL Check is available at https://velyntic.com/signal.html#signal-check
+- **URL**: https://velyntic.com/signal.html
+
+### Starter Web Presence
+- **Price**: £500 to £1,500 (fixed scope)
+- **Delivery**: 5 to 10 working days
+- **What it is**: A clean, professional website for small businesses — mobile-first, performance-optimised, ready to grow
+- **Includes**: Up to 5 pages, contact form, basic on-page SEO, schema markup, Google Analytics, Search Console, Cloudflare deployment with SSL/CDN, 30 days post-launch support
+- **Who it's for**: Sole traders, micro-businesses, small local businesses with no website or an outdated one
+
+### AI Web Build
+- **Price**: £4,500 to £12,000 (scoped per project)
+- **What it is**: Full business websites with AI woven throughout — intelligent forms, automation integrations, CMS, AI-driven content tools
+- **Note**: SIGNAL Assessment included on projects above £6,000
+- **Includes**: Full discovery, custom design, AI-powered forms, automation integrations, CMS, full SEO, analytics, Cloudflare deployment, 60 days post-launch support
+
+### Brand Foundation
+- **Price**: From £800
+- **What it is**: Complete brand identity — logo, colour palette, typography, tone of voice, brand guidelines
+- **Includes**: Brand discovery session, logo design (primary, reversed, monochrome), full colour palette with accessibility-checked contrast, typography system, tone of voice guide, brand bible PDF, full file pack (SVG, PNG, PDF, web-ready)
+
+### AI Consultancy
+- **Price**: £550 to £850 per day
+- **What it is**: Strategic and operational AI guidance — automation design, tool selection, prompt engineering, governance framework design, team training
+- **Who it's for**: SMEs with a specific AI challenge or opportunity, or those wanting independent perspective on their AI direction
+
+### EVOLVE Partnership
+- **Price**: From £450 per month (rolling, no minimum term)
+- **What it is**: Ongoing AI support, optimisation, and iteration
+- **Includes**: Monthly performance review, AI system optimisation, new use case identification, quarterly SIGNAL review, priority support, ongoing training, website/automation maintenance for Velyntic-built systems
+
+## Client Work
+
+Velyntic has delivered for:
+- **Mathias Auto Locksmith** — Web Design — https://mathiasautolocksmith.co.uk
+- **Coates Construction** — Brand Foundation & Web Design — https://coates-construction.co.uk
+- **LCW Heating** — Web Design — https://lcwheating.co.uk
+
+## Client Testimonials
+
+- **Gareth Mathias** (Mathias Auto Locksmith): "I contacted Velyntic for a website for my business. I was very impressed with the service I received from start to finish. They were very professional and I had regular updates during the build. I would highly recommend them."
+- **Luke** (LCW Heating): "Michael kept me involved throughout the entire process, listened to everything I wanted, and made sure the website was exactly right. I can't recommend Velyntic highly enough."
+- **Neil Coates** (Coates Construction): "Michael built a website for my construction business, all very straight forward, nothing was a problem with changing and adding bits to it, turned out perfect, would definitely recommend Velyntic to anyone, five star review."
+
+## Sectors Served
+
+Construction and trades, hospitality and catering, retail and distribution, transport and logistics, professional services, healthcare, manufacturing, and other non-tech sectors.
+
+## What Velyntic Will Honestly Tell You
+
+- AI will not fix a broken process — automating a bad process just produces bad output faster
+- Sometimes the honest answer is that AI is not where your money should go this year
+- Off-the-shelf tools often win for small businesses — Velyntic will recommend that route when appropriate, even though it earns less
+
+## Key Business Facts
+
+- All prices exclusive of VAT
+- No lock-in on any service
+- Fixed-fee services fully scoped before commitment
+- All accounts (domain, hosting, DNS, analytics) registered in the client's name
+- Full IP transfer on payment
+- Response time: within one working day
+- Typical project start: 1-2 weeks from initial conversation

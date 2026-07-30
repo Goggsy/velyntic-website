@@ -1,0 +1,82 @@
+# Velyntic
+
+> Velyntic is an AI adoption consultancy and web design studio based in North Yorkshire, UK. Founded by Michael Goggs, Velyntic helps small and medium businesses adopt AI responsibly, build professional websites, and create brand identities.
+
+## About
+
+Velyntic was founded by Michael Goggs, who brings fifteen years of operational leadership experience including five years in special operations, active SC Clearance, and AWS certification. Velyntic is based in the Catterick area of North Yorkshire, UK, and serves businesses across the United Kingdom.
+
+Velyntic's approach is people-first and governed by default. The company focuses exclusively on SMEs because that is where the gap between AI's potential and actual adoption is largest. Velyntic will tell a business if AI is not the right priority for them right now.
+
+## Services
+
+### SIGNAL AI Readiness Assessment
+- Price: £2,000 fixed fee
+- Delivery: 5-7 working days
+- A structured AI readiness assessment that maps operations, identifies where AI adds genuine value, and produces a governed adoption roadmap
+- Scores readiness across five dimensions: people, process, data, governance, and technology
+- Includes discovery session, operations mapping, sector analysis, 3-5 priority use cases, full written report, and review call
+- URL: https://velyntic.com/signal.html
+- A free online SIGNAL Check is available on the website
+
+### Starter Web Presence
+- Price: £500 to £1,500 fixed scope
+- Delivery: 5-10 working days
+- Professional websites for small businesses, mobile-first, performance-optimised
+- Up to five pages, contact form, basic SEO, Google Analytics, Cloudflare deployment
+- 30 days post-launch support
+
+### AI Web Build
+- Price: £4,500 to £12,000 per project
+- Full business websites with AI integrated: intelligent forms, automation connections, CMS, AI-driven content tools
+- SIGNAL Assessment included on projects above £6,000
+- Full SEO, analytics, 60 days post-launch support
+
+### Brand Foundation
+- Price: From £800
+- Logo, colour palette, typography, tone of voice, brand guidelines
+- Complete brand bible document
+
+### AI Consultancy
+- Price: £550 to £850 per day
+- Strategic and operational AI guidance, automation design, tool selection, prompt engineering, governance framework design, team training
+
+### EVOLVE Partnership
+- Price: From £450 per month, rolling, no minimum term
+- Ongoing AI support, optimisation, and iteration
+- Monthly performance reviews, quarterly SIGNAL reviews, priority support
+
+## ADDEE Framework
+
+Velyntic's delivery framework: Assess, Design, Deliver, Embed, Evolve. EVOLVE loops back into Assess, creating a continuous improvement cycle. Each stage has a defined output that feeds the next.
+
+## Location
+
+- Based in: Catterick, North Yorkshire, UK
+- Service area: United Kingdom (remote and in-person)
+- Local coverage: Richmond, Darlington, Northallerton, Harrogate, Teesside, York, Leeds, and surrounding areas
+
+## Sectors Served
+
+Construction and trades, hospitality and catering, retail and distribution, transport and logistics, professional services, healthcare, manufacturing, and more.
+
+## Contact
+
+- Email: support@velyntic.com
+- Website: https://velyntic.com
+- Response time: Within one working day
+- Contact form: https://velyntic.com/contact.html
+
+## Client Portfolio
+
+- Mathias Auto Locksmith: https://mathiasautolocksmith.co.uk (Web Design)
+- Coates Construction: https://coates-construction.co.uk (Brand Foundation & Web Design)
+- LCW Heating: https://lcwheating.co.uk (Web Design)
+
+## Key Facts
+
+- All prices exclusive of VAT
+- No lock-in on any service
+- Fixed-fee services fully scoped before commitment
+- All accounts (domain, hosting, DNS, analytics) registered in the client's name
+- Full IP transfer on payment

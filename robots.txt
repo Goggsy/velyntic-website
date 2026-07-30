@@ -1,0 +1,54 @@
+# Velyntic — velyntic.com
+# AI adoption consultancy and web design for SMEs
+# Based in North Yorkshire, UK
+
+User-agent: *
+Allow: /
+Disallow:
+
+# Sitemap
+Sitemap: https://velyntic.com/sitemap.xml
+
+# AI Crawlers — welcome
+# We provide an llms.txt for structured AI-readable context
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: FacebookExternalHit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# LLMs.txt reference for AI models
+# See: https://velyntic.com/llms.txt

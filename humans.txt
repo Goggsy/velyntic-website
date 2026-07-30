@@ -1,0 +1,16 @@
+/* TEAM */
+Founder: Michael Goggs
+Role: AI Adoption Consultant, Web Designer, Brand Strategist
+Location: Catterick, North Yorkshire, UK
+Contact: support@velyntic.com
+
+/* SITE */
+Built by: Velyntic
+Standards: HTML5, CSS3, Vanilla JavaScript
+Fonts: Archivo (headings), Inter (body) via Google Fonts
+Hosting: Cloudflare Pages
+Forms: Basin (usebasin.com)
+Last updated: July 2026
+
+/* THANKS */
+Clients: Mathias Auto Locksmith, Coates Construction, LCW Heating
