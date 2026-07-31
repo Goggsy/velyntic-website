@@ -91,6 +91,7 @@
     .sig-head { display: flex; justify-content: space-between; align-items: center; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); }
     .pulse { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--amber); margin-right: 6px; box-shadow: 0 0 0 0 rgba(245,158,11,0.5); animation: pulse 2s infinite; }
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(245,158,11,0.5); } 70% { box-shadow: 0 0 0 7px rgba(245,158,11,0); } 100% { box-shadow: 0 0 0 0 rgba(245,158,11,0); } }
+    @media (prefers-reduced-motion: reduce) { .pulse { animation: none; } }
     .sig-dots { display: flex; gap: 6px; margin: 16px 0 22px; }
     .sig-dots i { width: 28px; height: 3px; border-radius: 2px; background: var(--border-subtle); transition: background 0.3s; }
     .sig-dots i.active { background: var(--amber); }
@@ -164,7 +165,7 @@
     </button>
   </div>
 </header>
-<nav class="nav-drawer" id="navDrawer">
+<nav class="nav-drawer" id="navDrawer" aria-label="Mobile navigation">
   <a href="services.html">Services</a>
   <a href="approach.html">Approach</a>
   <a href="framework.html">Framework</a>
@@ -191,7 +192,7 @@
       </div>
       <div style="margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;">
         <a href="#signal-check" class="btn btn-amber">Try the free SIGNAL Check</a>
-        <a href="contact.html?service=signal" class="btn btn-outline">Book the full assessment</a>
+        <a href="contact.html?service=signal-assessment" class="btn btn-outline">Book the full assessment</a>
       </div>
     </div>
   </section>
@@ -237,7 +238,7 @@
           </div>
           <div class="sig-step" style="display:none">
             <p class="sig-qtext">Last one. Tell us about your business.</p>
-            <label class="sig-flabel">What sector are you in?</label>
+            <label class="sig-flabel" for="sig-sector">What sector are you in?</label>
             <select class="sig-field" id="sig-sector">
               <option value="professional">Professional services</option>
               <option value="construction">Construction and trades</option>
@@ -246,7 +247,7 @@
               <option value="hospitality">Hospitality and catering</option>
               <option value="other">Something else</option>
             </select>
-            <label class="sig-flabel">How many people work there? (<span id="sig-team-lab">10</span>)</label>
+            <label class="sig-flabel" for="sig-team">How many people work there? (<span id="sig-team-lab">10</span>)</label>
             <input type="range" min="1" max="100" value="10" class="sig-slider" id="sig-team">
             <div style="margin-top:20px;"><button class="btn btn-amber" id="sig-go">See my result</button></div>
           </div>
@@ -310,7 +311,7 @@
           </div>
 
           <div class="sig-resfoot">
-            <a href="contact.html?service=signal" class="btn btn-amber" style="padding:10px 20px;font-size:14px;">Book a full SIGNAL assessment</a>
+            <a href="contact.html?service=signal-assessment" class="btn btn-amber" style="padding:10px 20px;font-size:14px;">Book a full SIGNAL assessment</a>
             <button type="button" class="sig-retake">Retake</button>
           </div>
         </div>
